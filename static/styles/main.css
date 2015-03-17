@@ -895,3 +895,6 @@ select {
     position: relative;
     right: 91.66667%;
     left: auto; } }
+
+body {
+  font-family: 'Arial', sans-serif; }
