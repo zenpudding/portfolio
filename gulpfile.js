@@ -11,13 +11,15 @@ gulp.task('templates', function() {
       pretty: true	
     }))
     .pipe(gulp.dest('./static/'))
+    .pipe(connect.reload());
 });
 
 // Compile sass to css
 gulp.task('sass', function () {
     gulp.src('./src/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('static/styles'));
+        .pipe(gulp.dest('static/styles'))
+        .pipe(connect.reload());
 });
 
 gulp.task('serve', ['watch'], function() {
