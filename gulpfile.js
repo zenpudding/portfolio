@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var jade = require('gulp-jade');
 var connect = require('gulp-connect');
+var clean = require('gulp-clean');
 
 
 // Compile to HTML
@@ -20,6 +21,11 @@ gulp.task('sass', function () {
         .pipe(sass())
         .pipe(gulp.dest('static/styles'))
         .pipe(connect.reload());
+});
+
+gulp.task('clean', function () {
+	gulp.src('static', {read:false})
+		.pipe(clean());
 });
 
 gulp.task('serve', ['watch'], function() {
