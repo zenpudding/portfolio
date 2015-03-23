@@ -28,7 +28,7 @@ gulp.task('clean', function () {
 		.pipe(clean());
 });
 
-gulp.task('serve', ['watch'], function() {
+gulp.task('serve', ['default', 'watch'], function() {
 	connect.server({
 		root: 'static',
 		livereload: true
