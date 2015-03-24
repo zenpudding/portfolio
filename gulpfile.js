@@ -54,7 +54,7 @@ gulp.task('watch', function() {
 
 // deploy to gh pages
 gulp.task('deploy', function() {
-	return gulp.src('./static/**/*')
+	return gulp.src('./static/**/*.*')
 		.pipe(ghPages());
 });
 
