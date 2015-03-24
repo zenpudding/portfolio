@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var jade = require('gulp-jade');
 var connect = require('gulp-connect');
 var clean = require('gulp-clean');
+var ghPages = require('gulp-gh-pages');
 
 
 // Compile to HTML
@@ -30,11 +31,13 @@ gulp.task('js', function() {
 		.pipe(connect.reload());
 });
 
+// empty the static folder
 gulp.task('clean', function () {
 	gulp.src('static', {read:false})
 		.pipe(clean());
 });
 
+// serve and watch
 gulp.task('serve', ['default', 'watch'], function() {
 	connect.server({
 		root: 'static',
@@ -42,10 +45,18 @@ gulp.task('serve', ['default', 'watch'], function() {
 	});
 });
 
+// watch files
 gulp.task('watch', function() {
 	gulp.watch('./src/*.jade', ['templates']);
 	gulp.watch('./src/scss/*.scss', ['sass']);
 	gulp.watch('./src/js/*.js', ['js']);
 });
+
+// deploy to gh pages
+gulp.task('deploy', function() {
+	return gulp.src('./static/**/*')
+		.pipe(ghPages());
+});
+
 
 gulp.task('default', ['sass', 'templates', 'js']);
