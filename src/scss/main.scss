@@ -51,7 +51,13 @@ body {
 	top: 0;
 	background: #333;
 	transition: all 0.4s ease-out;
-	.active {
-		width: 400px;
+	&.active {
+		width: 300px;
 	}
+}
+
+.mousezone {
+	width: 300px;
+	position: fixed;
+	height: 100%;
 }

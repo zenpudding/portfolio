@@ -23,6 +23,13 @@ gulp.task('sass', function () {
         .pipe(connect.reload());
 });
 
+// transfer JS files
+gulp.task('js', function() {
+	gulp.src('./src/js/*.js')
+		.pipe(gulp.dest('static/js'))
+		.pipe(connect.reload());
+});
+
 gulp.task('clean', function () {
 	gulp.src('static', {read:false})
 		.pipe(clean());
@@ -38,6 +45,7 @@ gulp.task('serve', ['default', 'watch'], function() {
 gulp.task('watch', function() {
 	gulp.watch('./src/*.jade', ['templates']);
 	gulp.watch('./src/scss/*.scss', ['sass']);
+	gulp.watch('./src/js/*.js', ['js']);
 });
 
-gulp.task('default', ['sass', 'templates']);
+gulp.task('default', ['sass', 'templates', 'js']);
