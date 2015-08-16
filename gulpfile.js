@@ -31,6 +31,13 @@ gulp.task('js', function() {
 		.pipe(connect.reload());
 });
 
+// transfer image files
+gulp.task('img', function() {
+	gulp.src('./src/img/*.*')
+		.pipe(gulp.dest('static/img'))
+		.pipe(connect.reload());
+});
+
 // transfer CNAME file
 gulp.task('cname', function() {
 	gulp.src('./src/CNAME')
@@ -57,6 +64,7 @@ gulp.task('watch', function() {
 	gulp.watch('./src/*.jade', ['templates']);
 	gulp.watch('./src/scss/*.scss', ['sass']);
 	gulp.watch('./src/js/*.js', ['js']);
+	gulp.watch('./src/img/*.*', ['img']);
 });
 
 // deploy to gh pages
@@ -66,4 +74,4 @@ gulp.task('deploy', function() {
 });
 
 
-gulp.task('default', ['sass', 'templates', 'js', 'cname']);
+gulp.task('default', ['sass', 'templates', 'js', 'img', 'cname']);
