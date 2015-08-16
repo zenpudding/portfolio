@@ -897,7 +897,9 @@ select {
     left: auto; } }
 
 body {
-  font-family: 'source-sans-pro','Arial', sans-serif; }
+  font-family: 'source-sans-pro','Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 h1 {
   font-size: 60px; }
@@ -927,10 +929,64 @@ h1 {
   background: #111; }
 
 .home-center {
-  height: 100%;
-  width: 50%;
+  height: 500px;
+  width: 800px;
   margin: auto;
-  position: relative; }
-  .home-center h1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center; }
+  .home-center .kz-icon {
+    width: 145px;
+    margin: auto; }
+  .home-center .kevinzhou {
     color: #eee;
-    font-weight: 200; }
+    font-weight: 200;
+    font-size: 120px; }
+  .home-center .page-links ul {
+    margin-top: 0;
+    padding: 0; }
+  .home-center .page-links li {
+    display: inline; }
+  .home-center .page-links a {
+    color: #999;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 10px 0 10px;
+    transition: all 0.4s ease; }
+    .home-center .page-links a:hover {
+      color: #eee; }
+  .home-center .social-links ul {
+    padding: 0;
+    margin-top: 50px; }
+  .home-center .social-links li {
+    display: inline-block;
+    vertical-align: middle; }
+  .home-center .social-links a {
+    width: 50px;
+    margin: 0 10px 0 10px;
+    display: inline-block;
+    height: 50px;
+    background: #333;
+    border-radius: 999px;
+    transition: all 0.4s ease; }
+    .home-center .social-links a:hover img {
+      opacity: 1; }
+  .home-center .social-links img {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+    height: 100%; }
+  .home-center .social-links #linkedin img {
+    width: 28px; }
+  .home-center .social-links #linkedin:hover {
+    background: #0065a1; }
+  .home-center .social-links #github img {
+    width: 30px; }
+  .home-center .social-links #github:hover {
+    background: #181616; }
+  .home-center .social-links #mail-to img {
+    width: 30px; }
+  .home-center .social-links #mail-to:hover {
+    background: #5AAB67; }
