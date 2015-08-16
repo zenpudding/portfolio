@@ -31,6 +31,13 @@ gulp.task('js', function() {
 		.pipe(connect.reload());
 });
 
+// transfer CNAME file
+gulp.task('cname', function() {
+	gulp.src('./src/CNAME')
+		.pipe(gulp.dest('static'))
+		.pipe(connect.reload());
+});
+
 // empty the static folder
 gulp.task('clean', function () {
 	gulp.src('static', {read:false})
@@ -59,4 +66,4 @@ gulp.task('deploy', function() {
 });
 
 
-gulp.task('default', ['sass', 'templates', 'js']);
+gulp.task('default', ['sass', 'templates', 'js', 'cname']);
