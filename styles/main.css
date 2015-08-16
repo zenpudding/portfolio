@@ -897,7 +897,10 @@ select {
     left: auto; } }
 
 body {
-  font-family: 'Arial', sans-serif; }
+  font-family: 'source-sans-pro','Arial', sans-serif; }
+
+h1 {
+  font-size: 60px; }
 
 .menu {
   width: 60px;
@@ -914,3 +917,20 @@ body {
   width: 300px;
   position: fixed;
   height: 100%; }
+
+.splash {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #111; }
+
+.home-center {
+  height: 100%;
+  width: 50%;
+  margin: auto;
+  position: relative; }
+  .home-center h1 {
+    color: #eee;
+    font-weight: 200; }
