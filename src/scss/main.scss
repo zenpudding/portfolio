@@ -55,10 +55,62 @@ h1 {
 	position: fixed;
 	left: 0;
 	top: 0;
-	background: #333;
+	background: #111;
+	box-shadow: 1px 0 4px 2px #ccc;
 	transition: all 0.4s ease-out;
 	&.active {
-		width: 300px;
+		width: 500px;
+	}
+	.menu-center{
+		width: 320px;
+		height: 100%;
+		margin: auto;
+		padding-top: 100px;
+		padding-bottom: 100px;
+		.kz-icon {
+			width: 145px;
+			margin: auto;
+		}
+		.kz-name {
+			line-height: 1.0;
+			font-size: 120px;
+			color: #999;
+			font-weight: 200;
+			&::first-letter {
+				color: #eee;
+			}
+			&.top {
+				margin-top: 50px;
+				letter-spacing: 1.4px;
+			}
+		}
+		.menu-links {
+			list-style: none;
+			padding: 0;
+			font-size: 24px;
+			a {
+				transition: all 0.4s ease;
+				text-decoration: none;
+				color: #bbb;
+				font-weight: 300;
+				&:hover {
+					color: #eee;
+				}
+				&.active {
+					font-weight: normal;
+					color: #eee;
+				}
+			}
+		}
+		.social-links {
+			position: absolute;
+			bottom: 50px;
+			left: 0;
+			width: 100%;
+			ul {
+				margin: 0;
+			}
+		}
 	}
 }
 
@@ -97,10 +149,8 @@ h1 {
 		font-size: 120px;
 	}
 	.page-links {
-		ul {
-			margin-top: 0;
-			padding: 0;
-		}
+		margin-top: 0;
+		padding: 0;
 		li {
 			display: inline;
 		}
@@ -115,57 +165,57 @@ h1 {
 			transition: all 0.4s ease;
 		}
 	}
-	.social-links {
-		ul {
-			padding: 0;
-			margin-top: 50px;
-		}
-		li {
-			display: inline-block;
-			vertical-align: middle;
-		}
-		a {
-			width: 50px;
-			margin: 0 10px 0 10px;
-			display: inline-block;
-			height: 50px;
-			background: #333;
-			border-radius: 999px;
-			transition: all 0.4s ease;
-			&:hover {
-				img {
-					opacity: 1;
-				}
+}
+
+.social-links {
+	text-align: center;
+	padding: 0;
+	margin-top: 50px;
+	li {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	a {
+		width: 50px;
+		margin: 0 10px 0 10px;
+		display: inline-block;
+		height: 50px;
+		background: #333;
+		border-radius: 999px;
+		transition: all 0.4s ease;
+		&:hover {
+			img {
+				opacity: 1;
 			}
 		}
+	}
+	img {
+		transition: opacity 0.4s ease;
+		opacity: 0.5;
+		height: 100%;
+	}
+	#linkedin {
 		img {
-			transition: opacity 0.4s ease;
-			opacity: 0.5;
-			height: 100%;
+			width: 28px;
 		}
-		#linkedin {
-			img {
-				width: 28px;
-			}
-			&:hover {
-				background: #0065a1;
-			}
+		&:hover {
+			background: #0065a1;
 		}
-		#github {
-			img {
-				width: 30px;
-			}
-			&:hover {
-				background: #181616;
-			}
+	}
+	#github {
+		img {
+			width: 30px;
 		}
-		#mail-to {
-			img {
-				width: 30px;
-			}
-			&:hover {
-				background: #5AAB67;
-			}
+		&:hover {
+			background: #181616;
+		}
+	}
+	#mail-to {
+		img {
+			width: 30px;
+		}
+		&:hover {
+			background: #5AAB67;
 		}
 	}
 }

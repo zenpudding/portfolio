@@ -33,7 +33,7 @@ gulp.task('js', function() {
 
 // transfer image files
 gulp.task('img', function() {
-	gulp.src('./src/img/*.*')
+	gulp.src('./src/img/**/*.*')
 		.pipe(gulp.dest('static/img'))
 		.pipe(connect.reload());
 });
@@ -64,7 +64,7 @@ gulp.task('watch', function() {
 	gulp.watch('./src/*.jade', ['templates']);
 	gulp.watch('./src/scss/*.scss', ['sass']);
 	gulp.watch('./src/js/*.js', ['js']);
-	gulp.watch('./src/img/*.*', ['img']);
+	gulp.watch('./src/img/**/*.*', ['img']);
 });
 
 // deploy to gh pages
