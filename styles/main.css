@@ -902,76 +902,29 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 h1 {
-  font-size: 60px; }
+  font-size: 60px;
+  font-weight: 500;
+  color: #6cc989;
+  text-align: center; }
 
-.menu {
-  width: 60px;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: #111;
-  box-shadow: 1px 0 4px 2px #ccc;
-  transition: all 0.4s ease-out; }
-  .menu.active {
-    width: 500px; }
-  .menu .menu-center {
-    width: 320px;
-    height: 100%;
-    margin: auto;
-    padding-top: 100px;
-    padding-bottom: 100px; }
-    .menu .menu-center .kz-icon {
-      width: 145px;
-      margin: auto; }
-    .menu .menu-center .kz-name {
-      line-height: 1.0;
-      font-size: 120px;
-      color: #999;
-      font-weight: 200; }
-      .menu .menu-center .kz-name::first-letter {
-        color: #eee; }
-      .menu .menu-center .kz-name.top {
-        margin-top: 50px;
-        letter-spacing: 1.4px; }
-    .menu .menu-center .menu-links {
-      list-style: none;
-      padding: 0;
-      font-size: 24px; }
-      .menu .menu-center .menu-links a {
-        transition: all 0.4s ease;
-        text-decoration: none;
-        color: #bbb;
-        font-weight: 300; }
-        .menu .menu-center .menu-links a:hover {
-          color: #eee; }
-        .menu .menu-center .menu-links a.active {
-          font-weight: normal;
-          color: #eee; }
-    .menu .menu-center .social-links {
-      position: absolute;
-      bottom: 50px;
-      left: 0;
-      width: 100%; }
-      .menu .menu-center .social-links ul {
-        margin: 0; }
-
-.mousezone {
-  width: 300px;
-  position: fixed;
-  height: 100%; }
+h2 {
+  font-size: 38px;
+  font-weight: 300;
+  color: #555;
+  text-align: center; }
 
 .splash {
   width: 100%;
-  height: 100%;
-  position: fixed;
+  height: 90%;
+  position: relative;
   left: 0;
   top: 0;
-  background: #111; }
+  background: #fff;
+  border-bottom: 1px solid #ccc; }
 
 .home-center {
   height: 500px;
-  width: 800px;
+  width: 400px;
   margin: auto;
   position: absolute;
   top: 0;
@@ -979,26 +932,40 @@ h1 {
   right: 0;
   left: 0;
   text-align: center; }
-  .home-center .kz-icon {
-    width: 145px;
-    margin: auto; }
-  .home-center .kevinzhou {
-    color: #eee;
-    font-weight: 200;
-    font-size: 120px; }
-  .home-center .page-links {
-    margin-top: 0;
-    padding: 0; }
-    .home-center .page-links li {
-      display: inline; }
-    .home-center .page-links a {
-      color: #999;
-      font-size: 20px;
-      text-decoration: none;
-      margin: 0 10px 0 10px;
-      transition: all 0.4s ease; }
-      .home-center .page-links a:hover {
-        color: #eee; }
+  .home-center .splash-vid {
+    height: 400px;
+    width: 400px; }
+  .home-center .splash-desc {
+    width: 336px;
+    height: 88px;
+    margin: auto;
+    padding-top: 24px;
+    font-size: 22px;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    color: #6cc989; }
+
+.down-arrow {
+  position: relative;
+  width: 240px;
+  margin: auto;
+  margin-top: -60px; }
+
+.intro-block {
+  width: 80%;
+  margin: auto; }
+
+.design-block {
+  width: 100%;
+  position: relative;
+  height: auto;
+  min-height: 300px; }
+  .design-block .ux-block {
+    width: 50%;
+    height: auto; }
+  .design-block .visual-block {
+    width: 50%;
+    height: auto; }
 
 .social-links {
   text-align: center;
