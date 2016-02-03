@@ -39,6 +39,8 @@
 // @import "../../bower_components/foundation/scss/foundation/components/offcanvas";
 // @import "../../bower_components/foundation/scss/foundation/components/visibility";
 
+$green: #6cc989;
+
 body {
 	font-family: 'source-sans-pro','Arial', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -47,91 +49,31 @@ body {
 
 h1 {
 	font-size: 60px;
+	font-weight: 500;
+	color: $green;
+	text-align: center;
 }
 
-.menu {
-	width: 60px;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	background: #111;
-	box-shadow: 1px 0 4px 2px #ccc;
-	transition: all 0.4s ease-out;
-	&.active {
-		width: 500px;
-	}
-	.menu-center{
-		width: 320px;
-		height: 100%;
-		margin: auto;
-		padding-top: 100px;
-		padding-bottom: 100px;
-		.kz-icon {
-			width: 145px;
-			margin: auto;
-		}
-		.kz-name {
-			line-height: 1.0;
-			font-size: 120px;
-			color: #999;
-			font-weight: 200;
-			&::first-letter {
-				color: #eee;
-			}
-			&.top {
-				margin-top: 50px;
-				letter-spacing: 1.4px;
-			}
-		}
-		.menu-links {
-			list-style: none;
-			padding: 0;
-			font-size: 24px;
-			a {
-				transition: all 0.4s ease;
-				text-decoration: none;
-				color: #bbb;
-				font-weight: 300;
-				&:hover {
-					color: #eee;
-				}
-				&.active {
-					font-weight: normal;
-					color: #eee;
-				}
-			}
-		}
-		.social-links {
-			position: absolute;
-			bottom: 50px;
-			left: 0;
-			width: 100%;
-			ul {
-				margin: 0;
-			}
-		}
-	}
-}
-
-.mousezone {
-	width: 300px;
-	position: fixed;
-	height: 100%;
+h2 {
+	font-size: 38px;
+	font-weight: 300;
+	color: #555;
+	text-align: center;
 }
 
 .splash {
 	width: 100%;
-	height: 100%;
-	position: fixed;
+	height: 90%;
+	position: relative;
 	left: 0;
 	top: 0;
 	background: #fff;
+	border-bottom: 1px solid #ccc;
 }
 
 .home-center {
 	height: 500px;
-	width: 800px;
+	width: 400px;
 	margin: auto;
 	position: absolute;
 	top: 0;
@@ -143,32 +85,43 @@ h1 {
 		height: 400px;
 		width: 400px;
 	}
-	// .kz-icon {
-	// 	width: 145px;
-	// 	margin: auto;
-	// }
-	// .kevinzhou {
-	// 	color: #eee;
-	// 	font-weight: 200;
-	// 	font-size: 120px;
-	// }
-	// .page-links {
-	// 	margin-top: 0;
-	// 	padding: 0;
-	// 	li {
-	// 		display: inline;
-	// 	}
-	// 	a {
-	// 		color: #999;
-	// 		font-size: 20px;
-	// 		text-decoration: none;
-	// 		margin: 0 10px 0 10px;
-	// 		&:hover {
-	// 			color: #eee;
-	// 		}
-	// 		transition: all 0.4s ease;
-	// 	}
-	// }
+	.splash-desc {
+		width: 336px;
+		height: 88px;
+		margin: auto;
+		padding-top: 24px;
+		font-size: 22px;
+		border-top: 2px solid #eee;
+		border-bottom: 2px solid #eee;
+		color: $green;
+	}
+}
+
+.down-arrow {
+	position: relative;
+	width: 240px;
+	margin: auto;
+	margin-top: -60px;
+}
+
+.intro-block {
+	width: 80%;
+	margin: auto;
+}
+
+.design-block {
+	width: 100%;
+	position: relative;
+	height: auto;
+	min-height: 300px;
+	.ux-block {
+		width: 50%;
+		height: auto;
+	}
+	.visual-block {
+		width: 50%;
+		height: auto;
+	}
 }
 
 .social-links {
