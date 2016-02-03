@@ -126,7 +126,7 @@ h1 {
 	position: fixed;
 	left: 0;
 	top: 0;
-	background: #111;
+	background: #fff;
 }
 
 .home-center {
@@ -139,32 +139,36 @@ h1 {
 	right: 0;
 	left: 0;
 	text-align: center;
-	.kz-icon {
-		width: 145px;
-		margin: auto;
+	.splash-vid {
+		height: 400px;
+		width: 400px;
 	}
-	.kevinzhou {
-		color: #eee;
-		font-weight: 200;
-		font-size: 120px;
-	}
-	.page-links {
-		margin-top: 0;
-		padding: 0;
-		li {
-			display: inline;
-		}
-		a {
-			color: #999;
-			font-size: 20px;
-			text-decoration: none;
-			margin: 0 10px 0 10px;
-			&:hover {
-				color: #eee;
-			}
-			transition: all 0.4s ease;
-		}
-	}
+	// .kz-icon {
+	// 	width: 145px;
+	// 	margin: auto;
+	// }
+	// .kevinzhou {
+	// 	color: #eee;
+	// 	font-weight: 200;
+	// 	font-size: 120px;
+	// }
+	// .page-links {
+	// 	margin-top: 0;
+	// 	padding: 0;
+	// 	li {
+	// 		display: inline;
+	// 	}
+	// 	a {
+	// 		color: #999;
+	// 		font-size: 20px;
+	// 		text-decoration: none;
+	// 		margin: 0 10px 0 10px;
+	// 		&:hover {
+	// 			color: #eee;
+	// 		}
+	// 		transition: all 0.4s ease;
+	// 	}
+	// }
 }
 
 .social-links {

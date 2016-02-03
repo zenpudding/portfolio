@@ -967,7 +967,7 @@ h1 {
   position: fixed;
   left: 0;
   top: 0;
-  background: #111; }
+  background: #fff; }
 
 .home-center {
   height: 500px;
@@ -979,26 +979,9 @@ h1 {
   right: 0;
   left: 0;
   text-align: center; }
-  .home-center .kz-icon {
-    width: 145px;
-    margin: auto; }
-  .home-center .kevinzhou {
-    color: #eee;
-    font-weight: 200;
-    font-size: 120px; }
-  .home-center .page-links {
-    margin-top: 0;
-    padding: 0; }
-    .home-center .page-links li {
-      display: inline; }
-    .home-center .page-links a {
-      color: #999;
-      font-size: 20px;
-      text-decoration: none;
-      margin: 0 10px 0 10px;
-      transition: all 0.4s ease; }
-      .home-center .page-links a:hover {
-        color: #eee; }
+  .home-center .splash-vid {
+    height: 400px;
+    width: 400px; }
 
 .social-links {
   text-align: center;
