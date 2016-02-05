@@ -33,7 +33,7 @@ gulp.task('js', function() {
 
 // transfer image files
 gulp.task('img', function() {
-	gulp.src('./src/img/**/*.*')
+	gulp.src(['./src/img/**/*.*','!./src/img/**/*.db'])
 		.pipe(gulp.dest('static/img'))
 		.pipe(connect.reload());
 });

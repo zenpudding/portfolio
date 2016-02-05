@@ -2,42 +2,13 @@
 @import "main_settings";
 
 @import "../../bower_components/foundation/scss/foundation/components/grid";
-// @import "../../bower_components/foundation/scss/foundation/components/accordion";
-// @import "../../bower_components/foundation/scss/foundation/components/alert-boxes";
-// @import "../../bower_components/foundation/scss/foundation/components/block-grid";
-// @import "../../bower_components/foundation/scss/foundation/components/breadcrumbs";
-// @import "../../bower_components/foundation/scss/foundation/components/button-groups";
-// @import "../../bower_components/foundation/scss/foundation/components/buttons";
-// @import "../../bower_components/foundation/scss/foundation/components/clearing";
-// @import "../../bower_components/foundation/scss/foundation/components/dropdown";
-// @import "../../bower_components/foundation/scss/foundation/components/dropdown-buttons";
-// @import "../../bower_components/foundation/scss/foundation/components/flex-video";
-// @import "../../bower_components/foundation/scss/foundation/components/forms";
-// @import "../../bower_components/foundation/scss/foundation/components/icon-bar";
-// @import "../../bower_components/foundation/scss/foundation/components/inline-lists";
-// @import "../../bower_components/foundation/scss/foundation/components/joyride";
-// @import "../../bower_components/foundation/scss/foundation/components/keystrokes";
-// @import "../../bower_components/foundation/scss/foundation/components/labels";
-// @import "../../bower_components/foundation/scss/foundation/components/magellan";
-// @import "../../bower_components/foundation/scss/foundation/components/orbit";
-// @import "../../bower_components/foundation/scss/foundation/components/pagination";
-// @import "../../bower_components/foundation/scss/foundation/components/panels";
-// @import "../../bower_components/foundation/scss/foundation/components/pricing-tables";
-// @import "../../bower_components/foundation/scss/foundation/components/progress-bars";
-// @import "../../bower_components/foundation/scss/foundation/components/range-slider";
-// @import "../../bower_components/foundation/scss/foundation/components/reveal";
-// @import "../../bower_components/foundation/scss/foundation/components/side-nav";
-// @import "../../bower_components/foundation/scss/foundation/components/split-buttons";
-// @import "../../bower_components/foundation/scss/foundation/components/sub-nav";
-// @import "../../bower_components/foundation/scss/foundation/components/switches";
-// @import "../../bower_components/foundation/scss/foundation/components/tables";
-// @import "../../bower_components/foundation/scss/foundation/components/tabs";
-// @import "../../bower_components/foundation/scss/foundation/components/thumbs";
-// @import "../../bower_components/foundation/scss/foundation/components/tooltips";
-// @import "../../bower_components/foundation/scss/foundation/components/top-bar";
-// @import "../../bower_components/foundation/scss/foundation/components/type";
-// @import "../../bower_components/foundation/scss/foundation/components/offcanvas";
-// @import "../../bower_components/foundation/scss/foundation/components/visibility";
+
+@mixin vertical-align(){
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
 
 $green: #6cc989;
 
@@ -59,6 +30,19 @@ h2 {
 	font-weight: 300;
 	color: #555;
 	text-align: center;
+}
+
+#menu {
+	transition: all 0.5s ease;
+	position: fixed;
+	z-index: 999;
+	top: -100px;
+	left: 5%;
+	.logo-icon {
+		width: 100px;
+		height: 100px;
+		box-shadow: 8px 8px 9px rgba(120,120,120,0.1);
+	}
 }
 
 .splash {
@@ -99,28 +83,138 @@ h2 {
 
 .down-arrow {
 	position: relative;
-	width: 240px;
+	width: 120px;
 	margin: auto;
-	margin-top: -60px;
+	margin-top: -30px;
 }
 
 .intro-block {
 	width: 80%;
 	margin: auto;
+	padding: 160px 0;
 }
 
-.design-block {
+.design-container {
 	width: 100%;
 	position: relative;
-	height: auto;
-	min-height: 300px;
-	.ux-block {
+	height: 0;
+	padding-bottom: 50%;
+	.block {
 		width: 50%;
-		height: auto;
+		height: 0;
+		padding-bottom: 50%;
+		position: absolute;
+		&.ux {
+			background: #57bfb1;
+			left: 0;
+		}
+		&.vis {
+			background: #6ed5a7;
+			right: 0;		
+		}
+		.info { 
+			position: absolute;
+			left: 0;
+			right: 0;
+			text-align: center;
+			color: #fff;
+			@include vertical-align();
+			&.title {
+				font-size: 42px;
+				transition: all 0.5s ease;
+			}
+			&.subtitle {
+				transition: all 0.5s ease;
+				padding-top: 2em;
+				font-size: 28px;
+				opacity: 0.5;
+				font-weight: 300;
+				opacity: 0;
+			}
+		}
+		.go-dialog-area {
+			transition: all 0.5s ease;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 0;
+			color: #fff;
+			background-color: rgba(255,255,255,0.3);
+		}
+		.go-dialog {
+			transition: all 0.5s ease;
+			text-align: center;
+			position: absolute;
+			@include vertical-align();
+			width: 100%;
+			font-size: 28px;
+			opacity: 0;
+		}
+		&.active {
+			.title {
+				padding-bottom: 1em;
+			}
+			.subtitle {
+				opacity: 0.8;
+			}
+			.go-dialog-area {
+				height: 120px;
+			}
+			.go-dialog {
+				opacity: 1;
+			}
+		}
 	}
-	.visual-block {
-		width: 50%;
-		height: auto;
+}
+
+.mid-block {
+	width: 80%;
+	margin: auto;
+	padding: 160px 0;
+}
+
+.misc-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	.misc-block {
+		width: 28%;
+		height: 0;
+		padding-bottom: 28%;
+		margin: 2.5%;
+		display: inline-block;
+		.placeholder {
+			width: 100%;
+			height: 0;
+			padding-bottom: 100%;
+			background: #eee;
+		}
+		p {
+			text-align: center;
+			font-size: 30px;
+			color: #333;
+		}
+	}
+}
+
+.footer {
+	width: 100%;
+	height: 200px;
+	background: #555;
+	margin-top: 160px;
+	position: relative;
+	a.contact-button {
+		position: absolute;
+		width: 400px;
+		top: 30px;
+		left: 0;
+		right: 0;
+		padding: 30px 80px;
+		text-align: center;
+		font-size: 30px;
+		color: #555;
+		margin: auto;
+		background: #999;
 	}
 }
 

@@ -10,18 +10,49 @@ html(lang="en")
   body
     //- .menu
     //- .mousezone
+    #menu
+      .logo-icon
+        img(src='/img/menu-icon.svg')
+
     .splash
     .home-center
       video(class='splash-vid', autoplay='autoplay', loop='loop', src='img/home-anim-small.mp4')
       .splash-desc UX Designer, Visual Artist, Amoeba
     .down-arrow
       img(src='img/down-arrow.svg')
+    
     .intro-block
       h1 Hi, I'm Kevin
       h2 I'm a mid 20s creative professional based in Atlanta, GA.  I do a lot of things, so I consider myself an amoeba with a love of all things creative.
-    .design-block
-      .ux-block
-      .visual-block
+    
+    .design-container
+      a.block.ux
+        .info.title Interaction Design
+        .info.subtitle native apps
+        .go-dialog-area
+          .go-dialog see my work
+      a.block.vis
+          .info.title Visual Design
+          .info.subtitle apps and web
+          .go-dialog-area
+            .go-dialog see my work
+
+    .mid-block
+      h2 Lorem ipsum dolor sit amet, meis summo mel in, mel deleniti accusata deterruisset ad.
+
+    .misc-container
+      .misc-block
+        .placeholder
+        p videography
+      .misc-block
+        .placeholder
+        p webcomic
+      .misc-block
+        .placeholder
+        p animation
+
+    .footer
+      a.contact-button Get in Touch
       //- .kz-icon
       //-   img(src='img/kz-icon.svg')
       //- .kevinzhou KEVIN ZHOU
