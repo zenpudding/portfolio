@@ -1,4 +1,3 @@
-var foo = false;
 
 $(document).ready(function(){
 
@@ -12,10 +11,10 @@ $('.mousezone').mouseover( function() {
 //menu show/hide
 $(window).scroll(function(){
 	if($(window).scrollTop() > $(".splash").outerHeight() - 300){
-		$('#menu').css({top:'5%'});
+		$('#menu').addClass('active');
 	}
 	else {
-		$('#menu').css({top: '-100px'});
+		$('#menu').removeClass('active');
 	}
 });
 

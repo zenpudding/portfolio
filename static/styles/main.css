@@ -896,6 +896,89 @@ select {
     right: 91.66667%;
     left: auto; } }
 
+.tabs {
+  margin-bottom: 0 !important;
+  margin-left: 0; }
+  .tabs:before, .tabs:after {
+    content: " ";
+    display: table; }
+  .tabs:after {
+    clear: both; }
+  .tabs dd, .tabs .tab-title {
+    position: relative;
+    margin-bottom: 0 !important;
+    list-style: none;
+    float: left; }
+    .tabs dd > a, .tabs .tab-title > a {
+      display: block;
+      background-color: #EFEFEF;
+      color: #222222;
+      padding: 1rem 2rem;
+      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 1rem; }
+      .tabs dd > a:hover, .tabs .tab-title > a:hover {
+        background-color: #e1e1e1; }
+      .tabs dd > a:focus, .tabs .tab-title > a:focus {
+        outline: none; }
+    .tabs dd.active a, .tabs .tab-title.active a {
+      background-color: #FFFFFF;
+      color: #222222; }
+  .tabs.radius dd:first-child a, .tabs.radius .tab:first-child a {
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px; }
+  .tabs.radius dd:last-child a, .tabs.radius .tab:last-child a {
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px; }
+  .tabs.vertical dd, .tabs.vertical .tab-title {
+    position: inherit;
+    float: none;
+    display: block;
+    top: auto; }
+
+.tabs-content {
+  margin-bottom: 1.5rem;
+  width: 100%; }
+  .tabs-content:before, .tabs-content:after {
+    content: " ";
+    display: table; }
+  .tabs-content:after {
+    clear: both; }
+  .tabs-content > .content {
+    display: none;
+    float: left;
+    padding: 0.9375rem 0;
+    width: 100%; }
+    .tabs-content > .content.active {
+      display: block;
+      float: none; }
+    .tabs-content > .content.contained {
+      padding: 0.9375rem; }
+  .tabs-content.vertical {
+    display: block; }
+    .tabs-content.vertical > .content {
+      padding: 0 0.9375rem; }
+
+@media only screen and (min-width:40.063em) {
+  .tabs.vertical {
+    width: 20%;
+    max-width: 20%;
+    float: left;
+    margin: 0 0 1.25rem; }
+  .tabs-content.vertical {
+    width: 80%;
+    max-width: 80%;
+    float: left;
+    margin-left: -1px;
+    padding-left: 1rem; } }
+
+.no-js .tabs-content > .content {
+  display: block;
+  float: none; }
+
 body {
   font-family: 'source-sans-pro','Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -914,15 +997,70 @@ h2 {
   text-align: center; }
 
 #menu {
-  transition: all 0.5s ease;
+  transition: top 0.4s ease;
   position: fixed;
   z-index: 999;
-  top: -100px;
-  left: 5%; }
+  top: -150px;
+  padding: 2% 0 0 2%;
+  width: 70%;
+  max-width: 380px; }
+  #menu:hover .logo-icon {
+    opacity: 0.7; }
+  #menu:hover ul.page-links {
+    height: 9em;
+    margin-top: 60px;
+    opacity: 1; }
+    #menu:hover ul.page-links a {
+      display: block; }
   #menu .logo-icon {
+    transition: opacity 0.4s ease;
     width: 100px;
     height: 100px;
     box-shadow: 8px 8px 9px rgba(120, 120, 120, 0.1); }
+  #menu ul.page-links {
+    transition: all 0.5s ease;
+    font-size: 36px;
+    font-weight: 300;
+    list-style: none;
+    padding-left: 0;
+    opacity: 0;
+    margin: 0;
+    box-shadow: 8px 8px 9px rgba(120, 120, 120, 0.1);
+    height: 0; }
+    #menu ul.page-links li {
+      transition: all 0.4s ease;
+      width: 100%;
+      height: 33.33%;
+      position: relative;
+      background: #555; }
+      #menu ul.page-links li:hover {
+        background: #777; }
+        #menu ul.page-links li:hover .marker {
+          display: block; }
+      #menu ul.page-links li .marker {
+        position: absolute;
+        height: 100%;
+        width: 0.5em;
+        left: 0;
+        background: #999;
+        display: none; }
+      #menu ul.page-links li a {
+        transition: all 0.4s ease;
+        display: none;
+        text-decoration: none;
+        position: absolute;
+        width: 100%;
+        color: #aaa;
+        padding: 1em;
+        padding-left: 1.5em;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
+        #menu ul.page-links li a:hover {
+          color: #fff; }
+  #menu.active {
+    top: 0; }
 
 .splash {
   width: 100%;
@@ -1038,7 +1176,7 @@ h2 {
 
 .misc-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: auto; }
   .misc-container .misc-block {
     width: 28%;

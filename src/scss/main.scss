@@ -2,6 +2,7 @@
 @import "main_settings";
 
 @import "../../bower_components/foundation/scss/foundation/components/grid";
+@import "../../bower_components/foundation/scss/foundation/components/tabs";
 
 @mixin vertical-align(){
 	top: 50%;
@@ -33,15 +34,80 @@ h2 {
 }
 
 #menu {
-	transition: all 0.5s ease;
+	transition: top 0.4s ease;
 	position: fixed;
 	z-index: 999;
-	top: -100px;
-	left: 5%;
+	top: -150px;
+	padding: 2% 0 0 2%;
+	width: 70%;
+	max-width: 380px;
+	&:hover {
+		.logo-icon {
+			opacity: 0.7;
+		}
+		ul.page-links {
+			height: 9em;
+			margin-top: 60px;
+			opacity: 1;
+			a {
+				display: block;
+			}
+		}
+	}
 	.logo-icon {
+		transition: opacity 0.4s ease;
 		width: 100px;
 		height: 100px;
 		box-shadow: 8px 8px 9px rgba(120,120,120,0.1);
+	}
+	ul.page-links {
+		transition: all 0.5s ease;
+		font-size: 36px;
+		font-weight: 300;
+		list-style: none;
+		padding-left: 0;
+		opacity: 0;
+		margin: 0;
+		box-shadow: 8px 8px 9px rgba(120,120,120,0.1);
+		height: 0;
+		li {
+			transition: all 0.4s ease;
+			width: 100%;
+			height: 33.33%;
+			position: relative;
+			background: #555;
+			&:hover {
+				background: #777;
+				.marker {
+					display: block;
+				}
+			}
+			.marker {
+				position: absolute;
+				height: 100%;
+				width: 0.5em;
+				left: 0;
+				background: #999;
+				display: none;
+			}
+			a {
+				transition: all 0.4s ease;
+				display: none;
+				text-decoration: none;
+				position: absolute;
+				width: 100%;
+				color: #aaa;
+				padding: 1em;
+				padding-left: 1.5em;
+				@include vertical-align();
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+	&.active {
+		top: 0;
 	}
 }
 
@@ -175,7 +241,7 @@ h2 {
 
 .misc-container {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1600px;
 	margin: auto;
 	.misc-block {
 		width: 28%;
