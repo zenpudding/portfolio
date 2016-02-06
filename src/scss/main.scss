@@ -1,8 +1,8 @@
 @charset 'UTF-8';
-@import "main_settings";
+// @import "main_settings";
 
-@import "../../bower_components/foundation/scss/foundation/components/grid";
-@import "../../bower_components/foundation/scss/foundation/components/tabs";
+// @import "../../bower_components/foundation/scss/foundation/components/grid";
+// @import "../../bower_components/foundation/scss/foundation/components/tabs";
 
 @mixin vertical-align(){
 	top: 50%;
@@ -13,10 +13,13 @@
 
 $green: #6cc989;
 
-body {
+html, body {
 	font-family: 'source-sans-pro','Arial', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
 
 h1 {
@@ -34,20 +37,21 @@ h2 {
 }
 
 #menu {
-	transition: top 0.4s ease;
 	position: fixed;
+	transition: all 0.4s ease;
 	z-index: 999;
-	top: -150px;
+	top: -180px;
 	padding: 2% 0 0 2%;
 	width: 70%;
-	max-width: 380px;
+	max-width: 100px;
 	&:hover {
+		max-width: 380px;
 		.logo-icon {
 			opacity: 0.7;
 		}
 		ul.page-links {
 			height: 9em;
-			margin-top: 60px;
+			margin-top: 1em;
 			opacity: 1;
 			a {
 				display: block;
@@ -56,9 +60,11 @@ h2 {
 	}
 	.logo-icon {
 		transition: opacity 0.4s ease;
-		width: 100px;
-		height: 100px;
-		box-shadow: 8px 8px 9px rgba(120,120,120,0.1);
+		img {
+			width: 100px;
+			height: 100px;
+			// box-shadow: 8px 8px 9px rgba(120,120,120,0.1);
+		}
 	}
 	ul.page-links {
 		transition: all 0.5s ease;
@@ -149,9 +155,12 @@ h2 {
 
 .down-arrow {
 	position: relative;
-	width: 120px;
 	margin: auto;
+	width: 140px;
 	margin-top: -30px;
+	img {
+		width: 140px;
+	}
 }
 
 .intro-block {

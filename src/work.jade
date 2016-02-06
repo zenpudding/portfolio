@@ -5,6 +5,7 @@ html(lang="en")
     script(src="//use.typekit.net/jjl6qti.js")
     script try{Typekit.load({ async: true });}catch(e){}
     link(rel='stylesheet', href='styles/main.css')
+    link(rel='stylesheet', href='styles/work.css')
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
     script(src='js/main.js')
   body
@@ -21,3 +22,25 @@ html(lang="en")
         li
           .marker
           a(href='#') CONTACT
+
+    .work-container
+      input(type='radio' id='all' name='type' checked)
+      label(for='all') ALL
+      input(type='radio' id='ux' name='type')
+      label(for='ux') UX
+      input(type='radio' id='visual' name='type')
+      label(for='visual') VISUAL
+      input(type='radio' id='misc' name='type')
+      label(for='misc') MISC
+      .buffer
+
+      .work-item
+        a(href='#')
+        img(src='/img/work-ds-icon.svg')
+        .work-info
+          .work-title DIGITALSCIENTISTS.COM
+          .work-desc company and blog page redesign
+
+      .work-item.source
+      .work-item
+      .work-item
