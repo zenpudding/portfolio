@@ -14,6 +14,12 @@ gulp.task('templates', function() {
     }))
     .pipe(gulp.dest('./static/'))
     .pipe(connect.reload());
+   gulp.src('./src/work/*.jade')
+   	.pipe(jade({
+   		pretty: true
+   	}))
+   	.pipe(gulp.dest('./static/work/'))
+   	.pipe(connect.reload());
 });
 
 // Compile sass to css
@@ -62,6 +68,7 @@ gulp.task('serve', ['default', 'watch'], function() {
 // watch files
 gulp.task('watch', function() {
 	gulp.watch('./src/*.jade', ['templates']);
+	gulp.watch('./src/work/*.jade', ['templates']);
 	gulp.watch('./src/scss/*.scss', ['sass']);
 	gulp.watch('./src/js/*.js', ['js']);
 	gulp.watch('./src/img/**/*.*', ['img']);

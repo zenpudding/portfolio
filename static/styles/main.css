@@ -6,6 +6,9 @@ html, body {
   padding: 0;
   height: 100%; }
 
+body.modal-open {
+  overflow: hidden; }
+
 h1 {
   font-size: 60px;
   font-weight: 500;
@@ -21,7 +24,7 @@ h2 {
 #menu {
   position: fixed;
   transition: all 0.4s ease;
-  z-index: 999;
+  z-index: 5;
   top: -180px;
   padding: 2% 0 0 2%;
   width: 70%;
