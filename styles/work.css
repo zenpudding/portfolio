@@ -43,7 +43,8 @@
       z-index: 5;
       display: block;
       opacity: 0;
-      background: #fff; }
+      background: #fff;
+      cursor: pointer; }
       .work-container .work-item a:hover {
         opacity: 0.3; }
     .work-container .work-item img {
@@ -66,3 +67,99 @@
         color: #777;
         font-weight: 300;
         margin-top: 0.5em; }
+
+.case-container {
+  background: #fff; }
+
+.case-header {
+  width: 100%;
+  height: 260px;
+  background: #555;
+  position: relative;
+  margin-bottom: 180px; }
+  .case-header .case-icon {
+    width: 260px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%; }
+    .case-header .case-icon img {
+      width: 100%; }
+
+.case-intro {
+  width: 100%;
+  text-align: center;
+  font-size: 52px; }
+  .case-intro .case-title {
+    font-weight: 700; }
+  .case-intro .case-subtitle {
+    font-size: 32px;
+    font-weight: 300;
+    color: #777; }
+  .case-intro ul.case-tags {
+    list-style: none;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin-top: 20px; }
+    .case-intro ul.case-tags li {
+      display: inline;
+      font-size: 24px;
+      color: rgba(255, 255, 255, 0.8);
+      background: #4bccca;
+      padding: 0.5em 1.5em;
+      max-width: 10em; }
+
+.case-body {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto; }
+  .case-body p {
+    font-size: 28px;
+    font-weight: 300;
+    color: #333;
+    margin: 3em 0; }
+  .case-body img {
+    width: 100%; }
+
+#modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  display: none; }
+  #modal.active {
+    display: block;
+    overflow-y: auto; }
+
+#m-overlay {
+  transition: all 0.5s ease;
+  position: fixed;
+  width: 100%;
+  height: 0;
+  z-index: 999;
+  top: 50%;
+  background: #555;
+  opacity: 1; }
+  #m-overlay.active {
+    height: 100%;
+    top: 0; }
+  #m-overlay.small {
+    opacity: 0; }
+
+.m-close {
+  transition: opacity 0.5s ease;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  background: #fff;
+  opacity: 0.8;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  opacity: 0;
+  cursor: pointer; }
+  .m-close.active {
+    opacity: 1; }
