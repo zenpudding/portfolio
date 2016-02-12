@@ -1,6 +1,8 @@
+$(window).on('beforeunload', function() { $("video").hide(); });
 
 $(document).ready(function(){
 
+$('.vid-overlay').addClass('active');
 // mouse over to trigger menu open
 $('.mousezone').mouseover( function() {
 	$('.menu').addClass('active');
@@ -10,7 +12,7 @@ $('.mousezone').mouseover( function() {
 
 //menu show/hide
 $(window).scroll(function(){
-	if($(window).scrollTop() > $(".splash").outerHeight() - 300){
+	if($(window).scrollTop() > $(".splash").outerHeight()){
 		$('#menu').addClass('active');
 	}
 	else {
