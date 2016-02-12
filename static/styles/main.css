@@ -12,7 +12,7 @@ body.modal-open {
 h1 {
   font-size: 60px;
   font-weight: 500;
-  color: #6cc989;
+  color: #333;
   text-align: center; }
 
 h2 {
@@ -91,43 +91,74 @@ h2 {
 
 .splash {
   width: 100%;
-  height: 90%;
   position: relative;
   left: 0;
   top: 0;
-  background: #fff;
-  border-bottom: 1px solid #ccc; }
+  background: #fff; }
 
 .home-center {
-  height: 500px;
-  width: 400px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  width: 200px;
+  margin: 60px auto;
   left: 0;
+  right: 0;
   text-align: center; }
+  @media (min-width: 370px) {
+    .home-center {
+      width: 300px; } }
+  @media (min-width: 1024px) {
+    .home-center {
+      width: 480px;
+      margin: 80px auto; } }
   .home-center .splash-vid {
-    height: 400px;
-    width: 400px; }
+    width: 200px; }
+    @media (min-width: 370px) {
+      .home-center .splash-vid {
+        width: 300px; } }
+    @media (min-width: 1024px) {
+      .home-center .splash-vid {
+        width: 480px; } }
   .home-center .splash-desc {
-    width: 336px;
-    height: 88px;
+    width: 85%;
+    height: 2em;
     margin: auto;
-    padding-top: 24px;
-    font-size: 22px;
+    padding: 0;
+    line-height: 2em;
+    font-size: 20px;
     border-top: 2px solid #eee;
     border-bottom: 2px solid #eee;
-    color: #6cc989; }
+    color: #333; }
+    @media (min-width: 370px) {
+      .home-center .splash-desc {
+        font-size: 30px; } }
+    @media (min-width: 1024px) {
+      .home-center .splash-desc {
+        font-size: 46px; } }
+  .home-center .splash-desc-under {
+    font-size: 16px;
+    height: 2em;
+    line-height: 2em;
+    font-weight: 300;
+    color: #999; }
+    @media (min-width: 370px) {
+      .home-center .splash-desc-under {
+        font-size: 24px; } }
+    @media (min-width: 1024px) {
+      .home-center .splash-desc-under {
+        font-size: 30px; } }
 
-.down-arrow {
-  position: relative;
-  margin: auto;
-  width: 140px;
-  margin-top: -30px; }
-  .down-arrow img {
+.splash-buffer {
+  height: 300px;
+  background: #6cc989;
+  position: relative; }
+  .splash-buffer .down-arrow {
+    position: absolute;
+    margin: auto;
+    top: -1px;
+    left: 0;
+    right: 0;
     width: 140px; }
+    .splash-buffer .down-arrow img {
+      width: 140px; }
 
 .intro-block {
   width: 80%;
@@ -231,11 +262,10 @@ h2 {
   position: relative; }
   .footer a.contact-button {
     position: absolute;
-    width: 400px;
+    width: 100%;
     top: 30px;
     left: 0;
     right: 0;
-    padding: 30px 80px;
     text-align: center;
     font-size: 30px;
     color: #555;

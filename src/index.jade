@@ -2,6 +2,8 @@ doctype html
 html(lang="en")
   head
     title Kevin Zhou
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='apple-mobile-web-app-capable', content='yes')
     script(src="//use.typekit.net/jjl6qti.js")
     script try{Typekit.load({ async: true });}catch(e){}
     link(rel='stylesheet', href='styles/main.css')
@@ -27,9 +29,12 @@ html(lang="en")
     .splash
       .home-center
         video(class='splash-vid', autoplay='autoplay', loop='loop', src='img/home-anim-small.mp4')
-        .splash-desc UX Designer, Visual Artist, Amoeba
-    .down-arrow
-      img(src='img/down-arrow.svg')
+        .splash-desc
+          | Visual &middot; UX Designer
+        .splash-desc-under Designer, Artist, Amoeba
+    .splash-buffer
+      .down-arrow
+        img(src='img/down-arrow.svg')
     
     .intro-block
       h1 Hi, I'm Kevin
