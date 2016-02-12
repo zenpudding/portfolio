@@ -28,7 +28,8 @@ html(lang="en")
 
     .splash
       .home-center
-        video(class='splash-vid', autoplay='autoplay', loop='loop', src='img/home-anim-small.mp4')
+        img.vid-overlay(src='img/dummy-white.svg')
+        video(class='splash-vid', autoplay='autoplay', loop='loop', poster='img/logo-poster.svg', src='img/home-anim-small.mp4', type='video/mp4', preload='auto')
         .splash-desc
           | Visual &middot; UX Designer
         .splash-desc-under Designer, Artist, Amoeba

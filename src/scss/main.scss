@@ -40,6 +40,14 @@ h2 {
 	text-align: center;
 }
 
+.wf-loading {
+    visibility: hidden;
+}
+
+.wf-active, .wf-inactive {
+    visibility: visible;
+}
+
 #menu {
 	position: fixed;
 	transition: all 0.4s ease;
@@ -132,7 +140,7 @@ h2 {
 .home-center {
 	width: 200px;
 	margin: 60px auto;
-	//position: absolute;
+	position: relative;
 	left: 0;
 	right: 0;
 	text-align: center;
@@ -143,14 +151,22 @@ h2 {
 		width: 480px;
 		margin: 80px auto;
 	}
+	.vid-overlay {
+		transition: opacity 1s ease;
+		position: relative;
+		opacity: 1;
+		width: 100%;
+		z-index: 5;
+		&.active {
+			opacity: 0;
+		}
+	}
 	.splash-vid {
-		width: 200px;
-		@media (min-width: 370px) {
-			width: 300px;
-		}
-		@media (min-width: 1024px) {
-			width: 480px;
-		}
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
 	}
 	.splash-desc {
 		width: 85%;
