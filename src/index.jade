@@ -31,7 +31,7 @@ html(lang="en")
         img.vid-overlay(src='img/dummy-white.svg')
         video(class='splash-vid', autoplay='autoplay', loop='loop', poster='img/logo-poster.svg', src='img/home-anim-small.mp4', type='video/mp4', preload='auto')
         .splash-desc
-          | Visual &middot; UX Designer
+          | UX &middot; Visual Designer
         .splash-desc-under Designer, Artist, Amoeba
     .splash-buffer
       .down-arrow
@@ -39,19 +39,47 @@ html(lang="en")
     
     .intro-block
       h1 Hi, I'm Kevin
-      h2 I'm a mid 20s creative professional based in Atlanta, GA.  I do a lot of things, so I consider myself an amoeba with a love of all things creative.
+      h2 I'm a mid 20s creative professional based in Atlanta, GA. Due to somewhat of an identity crisis, I do a lot of different things, making me an amoeba with balance of logic and aesthetic. 
     
     .design-container
       a.block.ux
-        .info.title Interaction Design
-        .info.subtitle native apps
-        .go-dialog-area
-          .go-dialog see my work
+        .info
+          .title Interaction Design
+          ul.sublist
+            li native apps
+            li responsive web
+            li front-end development
+          .go-dialog-box
+            .go-dialog
+              .d-icon
+                img(src='/img/projects-icon.svg')
+              .d-label
+                | VIEW </br> PROJECTS
+        //- .go-dialog-box
+        //-   .go-dialog
+        //-     .d-icon
+        //-       img(src='/img/projects-icon.svg')
+        //-     .d-label
+        //-       | VIEW </br> PROJECTS
       a.block.vis
-          .info.title Visual Design
-          .info.subtitle apps and web
-          .go-dialog-area
-            .go-dialog see my work
+        .info
+          .title Visual Design
+          ul.sublist
+            li apps and web
+            li illustration
+            li animation
+          .go-dialog-box
+            .go-dialog
+              .d-icon
+                img(src='/img/projects-icon.svg')
+              .d-label
+                | VIEW </br> PROJECTS
+        //- .go-dialog-box
+        //-   .go-dialog
+        //-     .d-icon
+        //-       img(src='/img/projects-icon.svg')
+        //-     .d-label
+        //-       | VIEW </br> PROJECTS
 
     .mid-block
       h2 Lorem ipsum dolor sit amet, meis summo mel in, mel deleniti accusata deterruisset ad.
