@@ -53,17 +53,23 @@ h2 {
 	transition: all 0.4s ease;
 	z-index: 5;
 	top: -180px;
-	padding: 2% 0 0 2%;
-	width: 70%;
-	max-width: 100px;
-	&:hover {
-		max-width: 380px;
+	padding: 5% 0 0 5%;
+	width: 70px;
+	@media (min-width: 768px) {
+		padding: 2% 0 0 2%;
+		width: 100px;
+	}
+	&.expanded {
+		width: 280px;
+		@media (min-width: 768px) {
+			width: 380px;
+		}
 		.logo-icon {
-			opacity: 0.7;
+			opacity: 0.8;
+			background-image: url('/img/menu-close.svg');
 		}
 		ul.page-links {
 			height: 9em;
-			margin-top: 1em;
 			opacity: 1;
 			a {
 				display: block;
@@ -72,10 +78,37 @@ h2 {
 	}
 	.logo-icon {
 		transition: opacity 0.4s ease;
-		img {
+		background: url('/img/menu-icon.svg') no-repeat;
+		background-size: contain;
+		width: 70px;
+		height: 70px;
+		@media (min-width: 768px) {
 			width: 100px;
 			height: 100px;
-			// box-shadow: 8px 8px 9px rgba(120,120,120,0.1);
+		}
+		cursor: pointer;
+		// box-shadow: 8px 8px 9px rgba(120,120,120,0.1);
+	}
+	.menu-label {
+		transition: opacity 0.5s ease;
+		font-size: 18px;
+		text-align: center;
+		width: 70px;
+		height: 1.5em;
+		line-height: 1.5em;
+		margin-top: 5px;
+		padding: 0.2em 0;
+		background: #fff;
+		font-weight: 300;
+		color: #000;
+		opacity: 0.9;
+		&.hidden {
+			opacity: 0;
+		}
+		@media (min-width: 768px) {
+			width: 100px;
+			font-size: 24px;
+			padding: 0.2em 0;
 		}
 	}
 	ul.page-links {
@@ -113,13 +146,16 @@ h2 {
 				display: none;
 				text-decoration: none;
 				position: absolute;
-				width: 100%;
+				width: 68%;
 				color: #aaa;
 				padding: 1em;
 				padding-left: 1.5em;
 				@include vertical-align();
 				&:hover {
 					color: #fff;
+				}
+				@media (min-width: 768px) {
+					width: 76%;
 				}
 			}
 		}

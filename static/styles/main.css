@@ -32,24 +32,56 @@ h2 {
   transition: all 0.4s ease;
   z-index: 5;
   top: -180px;
-  padding: 2% 0 0 2%;
-  width: 70%;
-  max-width: 100px; }
-  #menu:hover {
-    max-width: 380px; }
-    #menu:hover .logo-icon {
-      opacity: 0.7; }
-    #menu:hover ul.page-links {
+  padding: 5% 0 0 5%;
+  width: 70px; }
+  @media (min-width: 768px) {
+    #menu {
+      padding: 2% 0 0 2%;
+      width: 100px; } }
+  #menu.expanded {
+    width: 280px; }
+    @media (min-width: 768px) {
+      #menu.expanded {
+        width: 380px; } }
+    #menu.expanded .logo-icon {
+      opacity: 0.8;
+      background-image: url('/img/menu-close.svg'); }
+    #menu.expanded ul.page-links {
       height: 9em;
-      margin-top: 1em;
       opacity: 1; }
-      #menu:hover ul.page-links a {
+      #menu.expanded ul.page-links a {
         display: block; }
   #menu .logo-icon {
-    transition: opacity 0.4s ease; }
-    #menu .logo-icon img {
-      width: 100px;
-      height: 100px; }
+    transition: opacity 0.4s ease;
+    background: url('/img/menu-icon.svg') no-repeat;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    cursor: pointer; }
+    @media (min-width: 768px) {
+      #menu .logo-icon {
+        width: 100px;
+        height: 100px; } }
+  #menu .menu-label {
+    transition: opacity 0.5s ease;
+    font-size: 18px;
+    text-align: center;
+    width: 70px;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin-top: 5px;
+    padding: 0.2em 0;
+    background: #fff;
+    font-weight: 300;
+    color: #000;
+    opacity: 0.9; }
+    #menu .menu-label.hidden {
+      opacity: 0; }
+    @media (min-width: 768px) {
+      #menu .menu-label {
+        width: 100px;
+        font-size: 24px;
+        padding: 0.2em 0; } }
   #menu ul.page-links {
     transition: all 0.5s ease;
     font-size: 36px;
@@ -82,7 +114,7 @@ h2 {
         display: none;
         text-decoration: none;
         position: absolute;
-        width: 100%;
+        width: 68%;
         color: #aaa;
         padding: 1em;
         padding-left: 1.5em;
@@ -92,6 +124,9 @@ h2 {
         transform: translateY(-50%); }
         #menu ul.page-links li a:hover {
           color: #fff; }
+        @media (min-width: 768px) {
+          #menu ul.page-links li a {
+            width: 76%; } }
   #menu.active {
     top: 0; }
 
