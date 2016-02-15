@@ -48,36 +48,35 @@ h2 {
 
 #menu {
   position: fixed;
-  -moz-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -moz-transition: top 0.4s ease;
+  -o-transition: top 0.4s ease;
+  -webkit-transition: top 0.4s ease;
+  transition: top 0.4s ease;
   z-index: 5;
   top: -180px;
-  padding: 5% 0 0 5%;
-  width: 70px; }
+  padding: 5% 0 0 5%; }
   @media (min-width: 768px) {
     #menu {
-      padding: 2% 0 0 2%;
-      width: 100px; } }
-  #menu.expanded {
-    width: 280px; }
-    @media (min-width: 768px) {
-      #menu.expanded {
-        width: 380px; } }
-    #menu.expanded .logo-icon {
-      opacity: 0.8;
-      background-image: url('/img/menu-close.svg'); }
-    #menu.expanded ul.page-links {
-      height: 9em;
-      opacity: 1; }
-      #menu.expanded ul.page-links a {
-        display: block; }
+      width: 100px;
+      -moz-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease; } }
+  @media (min-width: 1024px) {
+    #menu {
+      padding: 2% 0 0 2%; } }
+  @media (min-width: 768px) {
+    #menu.expanded {
+      width: 380px; } }
+  #menu.expanded .logo-icon {
+    opacity: 0.8;
+    background-image: url('/img/menu-close.svg'); }
+  #menu.expanded ul.page-links {
+    height: 9em;
+    opacity: 1; }
+    #menu.expanded ul.page-links a {
+      display: block; }
   #menu .logo-icon {
-    -moz-transition: opacity 0.4s ease;
-    -o-transition: opacity 0.4s ease;
-    -webkit-transition: opacity 0.4s ease;
-    transition: opacity 0.4s ease;
     background: url('/img/menu-icon.svg') no-repeat;
     background-size: contain;
     width: 70px;
@@ -87,6 +86,14 @@ h2 {
       #menu .logo-icon {
         width: 100px;
         height: 100px; } }
+    @media (min-width: 1025px) {
+      #menu .logo-icon {
+        -moz-transition: opacity 0.4s ease;
+        -o-transition: opacity 0.4s ease;
+        -webkit-transition: opacity 0.4s ease;
+        transition: opacity 0.4s ease; }
+        #menu .logo-icon:hover {
+          opacity: 0.7; } }
   #menu .menu-label {
     -moz-transition: opacity 0.5s ease;
     -o-transition: opacity 0.5s ease;
@@ -111,10 +118,6 @@ h2 {
         font-size: 24px;
         padding: 0.2em 0; } }
   #menu ul.page-links {
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
     font-size: 36px;
     font-weight: 300;
     list-style: none;
@@ -122,7 +125,17 @@ h2 {
     opacity: 0;
     margin: 0;
     box-shadow: 8px 8px 9px rgba(120, 120, 120, 0.1);
-    height: 0; }
+    height: 0;
+    width: 250px; }
+    @media (min-width: 768px) {
+      #menu ul.page-links {
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease; } }
+    @media (min-width: 514px) {
+      #menu ul.page-links {
+        width: 380px; } }
     #menu ul.page-links li {
       -moz-transition: all 0.4s ease;
       -o-transition: all 0.4s ease;
@@ -151,7 +164,7 @@ h2 {
         display: none;
         text-decoration: none;
         position: absolute;
-        width: 68%;
+        width: 65%;
         color: #aaa;
         padding: 1em;
         padding-left: 1.5em;
@@ -468,7 +481,7 @@ h2 {
   padding: 80px 0; }
   @media (min-width: 768px) {
     .contact-block {
-      width: 560px;
+      width: 640px;
       padding: 160px 0; } }
   .contact-block a {
     -moz-transition: opacity 0.4s ease;
@@ -492,6 +505,7 @@ h2 {
   position: relative; }
   .footer .contact-button {
     position: absolute;
+    cursor: pointer;
     width: 80%;
     font-size: 24px;
     height: 4em;
@@ -502,22 +516,66 @@ h2 {
     text-align: center;
     color: #fff;
     margin: auto;
-    background: #6cc989; }
+    background: #6cc989;
+    -moz-transition: background 0.4s ease;
+    -o-transition: background 0.4s ease;
+    -webkit-transition: background 0.4s ease;
+    transition: background 0.4s ease; }
     @media (min-width: 768px) {
       .footer .contact-button {
         width: 640px;
         font-size: 36px; } }
+    @media (min-width: 769px) {
+      .footer .contact-button:hover {
+        background: #a4e9bb; } }
   .footer .end-msg {
     position: absolute;
     bottom: 10px;
     left: 0;
     right: 0;
+    margin: auto;
     color: #777;
-    font-size: 28px;
+    font-size: 20px;
+    width: 80%;
     font-weight: 300;
     text-align: center; }
-  .footer .email-select {
-    display: none; }
+    @media (min-width: 768px) {
+      .footer .end-msg {
+        font-size: 28px; } }
+
+.email-select {
+  z-index: -10;
+  position: fixed;
+  bottom: -40px;
+  opacity: 0; }
+
+.copy-dialog {
+  position: fixed;
+  width: 80%;
+  font-size: 20px;
+  line-height: 4em;
+  height: 4em;
+  background: #eee;
+  color: #333;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-weight: 300;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease; }
+  @media (min-width: 678px) {
+    .copy-dialog {
+      width: 500px;
+      font-size: 36px; } }
+  .copy-dialog.active {
+    opacity: 0.8; }
 
 .social-links {
   text-align: center;
