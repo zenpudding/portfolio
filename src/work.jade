@@ -2,6 +2,8 @@ doctype html
 html(lang="en")
   head
     title Kevin Zhou
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='apple-mobile-web-app-capable', content='yes')
     script(src="//use.typekit.net/jjl6qti.js")
     script try{Typekit.load({ async: true });}catch(e){}
     link(rel='stylesheet', href='styles/main.css')
@@ -21,7 +23,7 @@ html(lang="en")
           a(href='/work.html') WORK
         li
           .marker
-          a(href='#') CONTACT
+          a(href='/#contact-section') CONTACT
 
     .work-container
       input(type='radio' id='all' name='type' checked)
@@ -34,17 +36,45 @@ html(lang="en")
       label(for='misc') MISC
       .buffer
 
-      .work-item.ds-site
+      .work-item.ds-company
         a
         img(src='/img/work-ds-icon.svg')
-        .work-info
-          .work-title DIGITALSCIENTISTS.COM
-          .work-desc company and blog page redesign
+        .work-info-wrap
+          .work-info
+            .work-title DIGITAL SCIENTISTS COMPANY PAGE
+            .work-desc company and blog page redesign
 
-      .work-item.source
+      .work-item.hubbell
+        a
+        .work-info-wrap
+          .work-info
+            .work-title HPS SELECT
+            .work-desc new feature to catalog app
       .work-item
       .work-item
 
+    .contact-block
+      h2
+        | Let's chat! You can contact me via email at <a class='email-link'>qkzhou27@gmail.com</a> or <a class='linkedin-link' href='http://linkedin.com/in/qkzhou'>linkedin</a>
+
+    a(name='contact-section')
+    .footer
+      .contact-button GET IN TOUCH
+      ul.social-links
+        li
+          a#linkedin(href='http://linkedin.com/in/qkzhou')
+            img(src='img/linked_in.svg')
+        li
+          a#github(href='http://github.com/zenpudding')
+            img(src='img/github.svg')
+        li
+          a#mail-to(href='mailto:zenpudding@gmail.com')
+            img(src='img/mail-icon.svg')
+      .end-msg designed and developed by Kevin Zhou
+    textarea.email-select qkzhou27@gmail.com
+
+    .copy-dialog email copied to clipboard
+    
     #modal
       .m-close
       #modal-content

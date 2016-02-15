@@ -3,6 +3,13 @@ var menushown = false;
 
 $(document).ready(function(){
 
+var pathname = window.location.pathname;
+
+if (pathname == '/work.html') {
+	setTimeout(function() {$('.menu-label').addClass('hidden'); }, 2400);
+	menushow = true;	
+}
+
 $('.vid-overlay').addClass('active');
 // mouse over to trigger menu open
 $('.mousezone').mouseover( function() {
@@ -15,24 +22,28 @@ var lastScrollTop = 0;
 //menu show/hide
 $(window).scroll(function(){
 	var st = $(this).scrollTop();
-	if(st > $(".splash").outerHeight()){
+	if(st > $(this).height() * 0.8){
 		$('#menu').addClass('active');
 		setTimeout(function() {$('.menu-label').addClass('hidden'); }, 2400);
 		setTimeout(function() { menushown = true; }, 2400);
 		if(($(window).width() < 1024) && (menushown == true)) {
+			//scroll downwards
 			if(st > lastScrollTop) {
 				//window.alert('hi');
 				$('#menu').removeClass('active');
 				$('#menu').removeClass('expanded');
 			}
+			//scroll upwards
 			else {
 				$('#menu').addClass('active');
 			}
 		} 
 	}
 	else {
-		$('#menu').removeClass('active');
-		$('#menu').removeClass('expanded');
+		if (pathname != '/work.html') {
+			$('#menu').removeClass('active');
+			$('#menu').removeClass('expanded');
+		}
 	}
 	lastScrollTop = st;
 });
@@ -54,8 +65,22 @@ $('.design-container .block').mouseover( function() {
 	$(this).removeClass('active');
 });
 
+//contact link stuff
+$('.contact-button, .email-link').click(function(){
+	$('.email-select').select();
+	try {
+		document.execCommand('copy');
+		$('.email-select').blur();
+		$('.copy-dialog').addClass('active');
+		setTimeout(function() {$('.copy-dialog').removeClass('active'); }, 1500);
+	}
+	catch (err) {
+		window.location.href = 'mailto:qkzhou27@gmail.com';
+	}
+});
+
 //load modal on work page
-$('.ds-site').click(function(){
+$('.ds-company').click(function(){
 	//event.preventDefault();
 	$('#modal').addClass('active');
 	$('#m-overlay').addClass('active');
@@ -63,11 +88,9 @@ $('.ds-site').click(function(){
 	setTimeout(function() {$('#modal-content').load('/work/ds-site.html .case-container'); }, 500);
 	setTimeout(function() {$('#m-overlay').addClass('small'); }, 500);
 	setTimeout(function() {$('.m-close').addClass('active'); }, 500);
-	setTimeout(function() {$('#m-overlay').css('z-index', '0'); }, 500);
 });
 
 $('.m-close').click(function(){
-	$('#m-overlay').css('z-index', '999');
 	$('#m-overlay').removeClass('small');
 	setTimeout(function() {$('#modal-content').empty(); }, 500);
 	setTimeout(function() {$('.m-close').removeClass('active'); }, 500);

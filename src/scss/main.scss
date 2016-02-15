@@ -79,17 +79,20 @@ h2 {
 
 #menu {
 	position: fixed;
-	@include transition(all 0.4s ease);
+	@include transition(top 0.4s ease);
 	z-index: 5;
 	top: -180px;
 	padding: 5% 0 0 5%;
-	width: 70px;
+	// width: 70px;
 	@media (min-width: 768px) {
-		padding: 2% 0 0 2%;
 		width: 100px;
+		@include transition(all 0.4s ease);
+	}
+	@media (min-width: 1024px) {
+		padding: 2% 0 0 2%;
 	}
 	&.expanded {
-		width: 280px;
+		// width: 250px;
 		@media (min-width: 768px) {
 			width: 380px;
 		}
@@ -106,7 +109,6 @@ h2 {
 		}
 	}
 	.logo-icon {
-		@include transition(opacity 0.4s ease);
 		background: url('/img/menu-icon.svg') no-repeat;
 		background-size: contain;
 		width: 70px;
@@ -114,6 +116,12 @@ h2 {
 		@media (min-width: 768px) {
 			width: 100px;
 			height: 100px;
+		}
+		@media (min-width: 1025px) {
+			@include transition(opacity 0.4s ease);
+			&:hover {
+				opacity: 0.7;
+			}
 		}
 		cursor: pointer;
 		// box-shadow: 8px 8px 9px rgba(120,120,120,0.1);
@@ -141,7 +149,9 @@ h2 {
 		}
 	}
 	ul.page-links {
-		@include transition(all 0.5s ease);
+		@media (min-width: 768px) {
+			@include transition(all 0.5s ease);
+		}
 		font-size: 36px;
 		font-weight: 300;
 		list-style: none;
@@ -150,6 +160,10 @@ h2 {
 		margin: 0;
 		box-shadow: 8px 8px 9px rgba(120,120,120,0.1);
 		height: 0;
+		width: 250px;
+		@media (min-width: 514px) {
+			width: 380px;
+		}
 		li {
 			@include transition(all 0.4s ease);
 			width: 100%;
@@ -175,7 +189,7 @@ h2 {
 				display: none;
 				text-decoration: none;
 				position: absolute;
-				width: 68%;
+				width: 65%;
 				color: #aaa;
 				padding: 1em;
 				padding-left: 1.5em;
@@ -525,7 +539,7 @@ h2 {
 	margin: auto;
 	padding: 80px 0;
 	@media (min-width: 768px) {
-		width: 560px;
+		width: 640px;
 		padding: 160px 0;
 	}
 	a {
@@ -552,6 +566,7 @@ h2 {
 	position: relative;
 	.contact-button {
 		position: absolute;
+		cursor: pointer;
 		width: 80%;
 		font-size: 24px;
 		height: 4em;
@@ -563,9 +578,15 @@ h2 {
 		color: #fff;
 		margin: auto;
 		background: $green;
+		@include transition(background 0.4s ease);
 		@media (min-width: 768px) {
 			width: 640px;
 			font-size: 36px;
+		}
+		&:hover {
+			@media (min-width: 769px) {
+				background: #a4e9bb;
+			} 
 		}
 	}
 	.end-msg {
@@ -573,13 +594,49 @@ h2 {
 		bottom: 10px;
 		left: 0;
 		right: 0;
+		margin: auto;
 		color: #777;
-		font-size: 28px;
+		font-size: 20px;
+		width: 80%;
 		font-weight: 300;
 		text-align: center;
+		@media (min-width: 768px) {
+			font-size: 28px;
+		}
 	}
-	.email-select {
-		display: none;
+}
+
+.email-select {
+	z-index: -10;
+	position: fixed;
+	bottom: -40px;
+	opacity: 0;
+}
+
+.copy-dialog {
+	position: fixed;
+	width: 80%;
+	font-size: 20px;
+	@media (min-width: 678px) {
+		width: 500px;
+		font-size: 36px;
+	}
+	line-height: 4em;
+	height: 4em;
+	background: #eee;
+	color: #333;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	font-weight: 300;
+	text-align: center;
+	opacity: 0;
+	pointer-events: none;
+	@include transition(opacity 0.5s ease);
+	&.active {
+		opacity: 0.8;
 	}
 }
 
