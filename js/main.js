@@ -32,10 +32,12 @@ $(window).scroll(function(){
 				//window.alert('hi');
 				$('#menu').removeClass('active');
 				$('#menu').removeClass('expanded');
+				$('.m-close').removeClass('active');
 			}
 			//scroll upwards
 			else {
 				$('#menu').addClass('active');
+				$('.m-close').addClass('active');
 			}
 		} 
 	}
