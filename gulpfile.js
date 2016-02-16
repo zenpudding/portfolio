@@ -51,6 +51,13 @@ gulp.task('cname', function() {
 		.pipe(connect.reload());
 });
 
+// transfer htaccess file
+gulp.task('htaccess', function() {
+	gulp.src('./src/.htaccess')
+		.pipe(gulp.dest('static'))
+		.pipe(connect.reload());
+});
+
 // empty the static folder
 gulp.task('clean', function () {
 	gulp.src('static', {read:false})
@@ -76,9 +83,9 @@ gulp.task('watch', function() {
 
 // deploy to gh pages
 gulp.task('deploy', function() {
-	return gulp.src(['./static/**/*.*', './static/CNAME'])
+	return gulp.src(['./static/**/*.*', './static/CNAME', './static/.htaccess'])
 		.pipe(ghPages());
 });
 
 
-gulp.task('default', ['sass', 'templates', 'js', 'img', 'cname']);
+gulp.task('default', ['sass', 'templates', 'js', 'img', 'cname', 'htaccess']);
