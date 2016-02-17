@@ -6,10 +6,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="//use.typekit.net/jjl6qti.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/work.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/work.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
   </head>
   <body>
     <div id="menu" class="active">
@@ -20,7 +20,7 @@
           <div class="marker"></div><a href="/">ABOUT</a>
         </li>
         <li>
-          <div class="marker"></div><a href="/work.html">WORK</a>
+          <div class="marker"></div><a href="/work/">WORK</a>
         </li>
         <li>
           <div class="marker"></div><a href="/#contact-section">CONTACT</a>
@@ -53,8 +53,22 @@
           </div>
         </div>
       </div>
-      <div class="work-item"></div>
-      <div class="work-item"></div>
+      <div class="work-item hubbell"><a></a><img src="/img/work-hubbell.svg">
+        <div class="work-info-wrap">
+          <div class="work-info">
+            <div class="work-title">HPS SELECT - CONNECTOR SELECTOR</div>
+            <div class="work-desc">new feature to Hubbell catalog app</div>
+          </div>
+        </div>
+      </div>
+      <div class="work-item napa"><a></a><img src="/img/work-napa.svg">
+        <div class="work-info-wrap">
+          <div class="work-info">
+            <div class="work-title">NAPA KNOW HOW</div>
+            <div class="work-desc">temporary makeover of mobile site and app</div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="contact-block">
       <h2>Let's chat! You can contact me via email at <a class='email-link'>qkzhou27@gmail.com</a> or <a class='linkedin-link' href='http://linkedin.com/in/qkzhou'>linkedin</a></h2>
@@ -62,17 +76,16 @@
     <div class="footer">
       <div class="contact-button">GET IN TOUCH</div>
       <ul class="social-links">
-        <li><a id="linkedin" href="http://linkedin.com/in/qkzhou"><img src="img/linked_in.svg"></a></li>
-        <li><a id="github" href="http://github.com/zenpudding"><img src="img/github.svg"></a></li>
-        <li><a id="mail-to" href="mailto:zenpudding@gmail.com"><img src="img/mail-icon.svg"></a></li>
+        <li><a id="linkedin" href="http://linkedin.com/in/qkzhou"><img src="/img/linked_in.svg"></a></li>
+        <li><a id="github" href="http://github.com/zenpudding"><img src="/img/github.svg"></a></li>
+        <li><a id="mail-to" href="mailto:zenpudding@gmail.com"><img src="/img/mail-icon.svg"></a></li>
       </ul>
       <div class="end-msg">designed and developed by Kevin Zhou</div>
     </div>
     <textarea class="email-select">qkzhou27@gmail.com</textarea>
     <div class="copy-dialog">email copied to clipboard</div>
     <div id="m-overlay"></div>
-    <div id="modal">
-      <div class="m-close"></div>
+    <div id="modal"><img src="/img/case-back.svg" class="m-close">
       <div id="modal-content"></div>
     </div>
   </body>
