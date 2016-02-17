@@ -6,10 +6,10 @@ html(lang="en")
     meta(name='apple-mobile-web-app-capable', content='yes')
     script(src="//use.typekit.net/jjl6qti.js")
     script try{Typekit.load({ async: true });}catch(e){}
-    link(rel='stylesheet', href='styles/main.css')
-    link(rel='stylesheet', href='styles/work.css')
+    link(rel='stylesheet', href='/styles/main.css')
+    link(rel='stylesheet', href='/styles/work.css')
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
-    script(src='js/main.js')
+    script(src='/js/main.js')
   body
     #menu.active
       .logo-icon
@@ -20,7 +20,7 @@ html(lang="en")
           a(href='/') ABOUT
         li
           .marker
-          a(href='/work.html') WORK
+          a(href='/work/') WORK
         li
           .marker
           a(href='/#contact-section') CONTACT
@@ -51,8 +51,21 @@ html(lang="en")
           .work-info
             .work-title DIGITAL SCIENTISTS BLOG PAGE
             .work-desc blog page redesign
-      .work-item
-      .work-item
+      
+      .work-item.hubbell
+        a
+        img(src='/img/work-hubbell.svg')
+        .work-info-wrap
+          .work-info
+            .work-title HPS SELECT - CONNECTOR SELECTOR
+            .work-desc new feature to Hubbell catalog app
+      .work-item.napa
+        a
+        img(src='/img/work-napa.svg')
+        .work-info-wrap
+          .work-info
+            .work-title NAPA KNOW HOW
+            .work-desc temporary makeover of mobile site and app
 
     .contact-block
       h2
@@ -64,13 +77,13 @@ html(lang="en")
       ul.social-links
         li
           a#linkedin(href='http://linkedin.com/in/qkzhou')
-            img(src='img/linked_in.svg')
+            img(src='/img/linked_in.svg')
         li
           a#github(href='http://github.com/zenpudding')
-            img(src='img/github.svg')
+            img(src='/img/github.svg')
         li
           a#mail-to(href='mailto:zenpudding@gmail.com')
-            img(src='img/mail-icon.svg')
+            img(src='/img/mail-icon.svg')
       .end-msg designed and developed by Kevin Zhou
     textarea.email-select qkzhou27@gmail.com
 
@@ -78,5 +91,5 @@ html(lang="en")
 
     #m-overlay
     #modal
-      .m-close
+      img.m-close(src='/img/case-back.svg')
       #modal-content

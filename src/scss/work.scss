@@ -85,7 +85,7 @@
 			height: 300px;
 		}
 		@media (min-width: 1400px) {
-			height: 400px;
+			height: 360px;
 			margin-top: 60px;
 		}
 		a {
@@ -184,7 +184,7 @@
 	position: relative;
 	margin-bottom: 40px;
 	@media (min-width: 768px) {
-		height: 260px;
+		height: 200px;
 		margin-bottom: 180px;
 	}
 	.case-icon {
@@ -195,7 +195,7 @@
 		right: 0;
 		top: 50%;
 		@media (min-width: 768px) {
-			width: 260px;
+			width: 200px;
 		}
 		img {
 			width: 100%;
@@ -273,9 +273,18 @@
 	}
 }
 
+img.wide {
+	margin: 20px 0;
+	width: 100%;
+	@media (min-width: 768px) {
+		margin: 40px 0;
+	}
+}
+
 .case-footer {
 	height: 60px;
-	background: #333;
+	background: #555;
+	margin-top: 60px;
 }
 
 .ds-co {
@@ -319,6 +328,14 @@
 	}
 }
 
+.m-header {
+	position: fixed;
+	top: 0;
+	height: 80px;
+	width: 100%;
+	background: #555;
+}
+
 .m-close {
 	@include transition(opacity 0.5s ease);
 	width: 60px;
@@ -326,6 +343,8 @@
 	@media (min-width: 768px) {
 		width: 100px;
 		height: 100px;
+		top: 45px;
+		left: 45px;
 	}
 	position: fixed;
 	background: #fff;
@@ -335,6 +354,6 @@
 	opacity: 0;
 	cursor: pointer;
 	&.active {
-		opacity: 0.9;
+		opacity: 0.8;
 	}
 }

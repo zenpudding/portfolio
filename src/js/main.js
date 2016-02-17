@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 var pathname = window.location.pathname;
 
-if (pathname == '/work.html') {
+if (pathname == '/work/') {
 	setTimeout(function() {$('.menu-label').addClass('hidden'); }, 2400);
 	menushow = true;	
 }
@@ -42,7 +42,7 @@ $(window).scroll(function(){
 		} 
 	}
 	else {
-		if (pathname != '/work.html') {
+		if (pathname != '/work/') {
 			$('#menu').removeClass('active');
 			$('#menu').removeClass('expanded');
 		}
@@ -81,24 +81,44 @@ $('.contact-button, .email-link').click(function(){
 	}
 });
 
-//load modal on work page
-$('.ds-company').click(function(){
-	//event.preventDefault();
+var openModal = function(pagepath) {
 	$('#modal').addClass('active');
 	$('#m-overlay').addClass('active');
 	setTimeout(function() {$('body').addClass('modal-open'); }, 500);
-	setTimeout(function() {$('#modal-content').load('/work/ds-site.html .case-container'); }, 500);
+	setTimeout(function() {$('#modal-content').load(pagepath + ' .case-container'); }, 500);
 	setTimeout(function() {$('#m-overlay').addClass('small'); }, 500);
 	setTimeout(function() {$('.m-close').addClass('active'); }, 500);
-});
+}
 
-$('.m-close').click(function(){
+var closeModal = function() {
 	$('#m-overlay').removeClass('small');
 	setTimeout(function() {$('#modal-content').empty(); }, 500);
 	setTimeout(function() {$('.m-close').removeClass('active'); }, 500);
 	setTimeout(function() {$('#m-overlay').removeClass('active'); }, 1000);
 	setTimeout(function() {$('#modal').removeClass('active'); }, 1000);
 	setTimeout(function() {$('body').removeClass('modal-open') }, 500);
+}
+
+//load modal on work page
+$('.ds-company').click(function(){
+	openModal('/work/ds-co.html');
+});
+
+$('.ds-blog').click(function(){
+	openModal('/work/ds-blog.html');
+});
+
+$('.hubbell').click(function(){
+	openModal('/work/hubbell.html');
+});
+
+$('.napa').click(function(){
+	openModal('/work/napa.html');
+});
+
+// closes modal
+$('.m-close').click(function(){
+	closeModal();
 });
 
 });
