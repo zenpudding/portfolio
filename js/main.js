@@ -100,12 +100,8 @@ var closeModal = function() {
 }
 
 //load modal on work page
-$('.ds-company').click(function(){
-	openModal('/work/ds-co.html');
-});
-
-$('.ds-blog').click(function(){
-	openModal('/work/ds-blog.html');
+$('.ds-site').click(function(){
+	openModal('/work/ds-site.html');
 });
 
 $('.hubbell').click(function(){
@@ -114,6 +110,14 @@ $('.hubbell').click(function(){
 
 $('.napa').click(function(){
 	openModal('/work/napa.html');
+});
+
+$('.eprove').click(function(){
+	openModal('/work/eprove.html');
+});
+
+$('.source').click(function(){
+	openModal('/work/source.html');
 });
 
 // closes modal
