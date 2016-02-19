@@ -39,15 +39,18 @@
   .work-container input[type='radio'][id='ux']:checked ~ .not-ux {
     height: 0;
     margin: 0;
-    opacity: 0; }
+    opacity: 0;
+    pointer-events: none; }
   .work-container input[type='radio'][id='visual']:checked ~ .not-vis {
     height: 0;
     margin: 0;
-    opacity: 0; }
+    opacity: 0;
+    pointer-events: none; }
   .work-container input[type='radio'][id='misc']:checked ~ .not-misc {
     height: 0;
     margin: 0;
-    opacity: 0; }
+    opacity: 0;
+    pointer-events: none; }
   .work-container .buffer {
     height: 80px; }
     @media (min-width: 514px) {
@@ -66,7 +69,8 @@
     position: relative;
     margin-top: 20px;
     opacity: 1;
-    height: 140px; }
+    height: 180px;
+    pointer-events: initial; }
     @media (min-width: 768px) {
       .work-container .work-item {
         -moz-transition: all 0.5s ease;
@@ -104,11 +108,29 @@
           display: inline-block;
           height: 100%; } }
     @media (max-width: 767px) {
-      .work-container .work-item.ds-company {
-        border-left: 8px solid #555; } }
+      .work-container .work-item.ds-site {
+        border-left: 8px solid #1ebbc4; } }
     @media (max-width: 767px) {
       .work-container .work-item.hubbell {
-        border-left: 8px solid #555; } }
+        border-left: 8px solid #ffe44c; } }
+    @media (max-width: 767px) {
+      .work-container .work-item.napa {
+        border-left: 8px solid #0051a2; } }
+    @media (max-width: 767px) {
+      .work-container .work-item.eprove {
+        border-left: 8px solid #aaa; } }
+    @media (max-width: 767px) {
+      .work-container .work-item.source {
+        border-left: 8px solid #333; } }
+    @media (max-width: 767px) {
+      .work-container .work-item.video {
+        border-left: 8px solid #dd7676; } }
+    @media (max-width: 767px) {
+      .work-container .work-item.anim {
+        border-left: 8px solid #4cc181; } }
+    @media (max-width: 767px) {
+      .work-container .work-item.comic {
+        border-left: 8px solid #f7d74c; } }
     .work-container .work-item .work-info-wrap {
       display: block;
       position: relative;

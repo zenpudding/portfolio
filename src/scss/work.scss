@@ -55,16 +55,19 @@
 		height: 0;
 		margin: 0;
 		opacity: 0;
+		pointer-events: none;
 	}
 	input[type='radio'][id='visual']:checked ~ .not-vis {
 		height: 0;
 		margin: 0;
 		opacity: 0;
+		pointer-events: none;
 	}
 	input[type='radio'][id='misc']:checked ~ .not-misc {
 		height: 0;
 		margin: 0;
 		opacity: 0;
+		pointer-events: none;
 	}
 	.buffer {
 		height: 80px;
@@ -85,7 +88,8 @@
 		position: relative;
 		margin-top: 20px;
 		opacity: 1;
-		height: 140px;
+		height: 180px;
+		pointer-events: initial;
 		@media (min-width: 768px) {
 			@include transition(all 0.5s ease);
 			height: 200px;
@@ -119,14 +123,44 @@
 				height: 100%;
 			}
 		}
-		&.ds-company {
+		&.ds-site {
 			@media (max-width: 767px) {
-				border-left: 8px solid #555;
+				border-left: 8px solid #1ebbc4;
 			}
 		}
 		&.hubbell {
 			@media (max-width: 767px) {
-				border-left: 8px solid #555;
+				border-left: 8px solid #ffe44c;
+			}
+		}
+		&.napa {
+			@media (max-width: 767px) {
+				border-left: 8px solid #0051a2;
+			}
+		}
+		&.eprove {
+			@media (max-width: 767px) {
+				border-left: 8px solid #aaa;
+			}
+		}
+		&.source {
+			@media (max-width: 767px) {
+				border-left: 8px solid #333;
+			}
+		}
+		&.video {
+			@media (max-width: 767px) {
+				border-left: 8px solid #dd7676;
+			}
+		}
+		&.anim {
+			@media (max-width: 767px) {
+				border-left: 8px solid #4cc181;
+			}
+		}
+		&.comic {
+			@media (max-width: 767px) {
+				border-left: 8px solid #f7d74c;
 			}
 		}
 		.work-info-wrap {
