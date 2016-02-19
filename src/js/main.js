@@ -120,6 +120,14 @@ $('.source').click(function(){
 	openModal('/work/source.html');
 });
 
+$('.video').click(function(){
+	openModal('/work/video.html');
+});
+
+$('.anim').click(function(){
+	openModal('/work/anim.html');
+});
+
 // closes modal
 $('.m-close').click(function(){
 	closeModal();

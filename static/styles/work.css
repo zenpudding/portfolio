@@ -242,11 +242,11 @@
       .case-body img {
         margin: 40px 0; } }
 
-img.wide {
+.wide {
   margin: 20px 0;
   width: 100%; }
   @media (min-width: 768px) {
-    img.wide {
+    .wide {
       margin: 40px 0; } }
 
 .case-footer {
