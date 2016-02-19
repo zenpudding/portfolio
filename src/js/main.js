@@ -128,6 +128,10 @@ $('.anim').click(function(){
 	openModal('/work/anim.html');
 });
 
+$('.comic').click(function(){
+	openModal('/work/comic.html');
+});
+
 // closes modal
 $('.m-close').click(function(){
 	closeModal();
