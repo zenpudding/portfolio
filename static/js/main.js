@@ -82,10 +82,10 @@ $('.contact-button, .email-link').click(function(){
 });
 
 var openModal = function(pagepath) {
-	$('#modal').addClass('active');
 	$('#m-overlay').addClass('active');
+	$('#modal-content').load(pagepath + ' .case-container');
 	setTimeout(function() {$('body').addClass('modal-open'); }, 500);
-	setTimeout(function() {$('#modal-content').load(pagepath + ' .case-container'); }, 500);
+	setTimeout(function() {$('#modal').addClass('active'); }, 500);
 	setTimeout(function() {$('#m-overlay').addClass('small'); }, 500);
 	setTimeout(function() {$('.m-close').addClass('active'); }, 500);
 }
