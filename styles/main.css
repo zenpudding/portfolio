@@ -48,15 +48,17 @@ h2 {
 
 #menu {
   position: fixed;
-  -moz-transition: top 0.4s ease;
-  -o-transition: top 0.4s ease;
-  -webkit-transition: top 0.4s ease;
-  transition: top 0.4s ease;
+  -moz-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
   z-index: 20;
-  top: -180px;
-  padding: 5% 0 0 5%; }
+  padding: 5% 0 0 5%;
+  opacity: 0;
+  top: 0; }
   @media (min-width: 768px) {
     #menu {
+      top: -180px;
       width: 100px;
       -moz-transition: all 0.4s ease;
       -o-transition: all 0.4s ease;
@@ -178,7 +180,8 @@ h2 {
           #menu ul.page-links li a {
             width: 76%; } }
   #menu.active {
-    top: 0; }
+    top: 0;
+    opacity: 1; }
 
 .splash {
   width: 100%;
