@@ -58,6 +58,13 @@ gulp.task('htaccess', function() {
 		.pipe(connect.reload());
 });
 
+// transfer favicon ico
+gulp.task('favicon', function() {
+	gulp.src('./src/favicon.ico')
+		.pipe(gulp.dest('static'))
+		.pipe(connect.reload());
+});
+
 // empty the static folder
 gulp.task('clean', function () {
 	gulp.src('static', {read:false})
@@ -83,9 +90,9 @@ gulp.task('watch', function() {
 
 // deploy to gh pages
 gulp.task('deploy', function() {
-	return gulp.src(['./static/**/*.*', './static/CNAME', './static/.htaccess'])
+	return gulp.src(['./static/**/*.*', './static/CNAME', './static/.htaccess', './static/*.ico'])
 		.pipe(ghPages());
 });
 
 
-gulp.task('default', ['sass', 'templates', 'js', 'img', 'cname', 'htaccess']);
+gulp.task('default', ['sass', 'templates', 'js', 'img', 'cname', 'htaccess', 'favicon']);
