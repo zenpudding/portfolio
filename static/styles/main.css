@@ -375,7 +375,7 @@ p {
     width: 100px;
     cursor: pointer;
     display: none; }
-    @media (min-height: 769px) {
+    @media (min-width: 769px) {
       .splash .down-arrow {
         display: block; } }
     .splash .down-arrow:hover {
