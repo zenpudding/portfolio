@@ -348,7 +348,7 @@ p {
         bottom: 0;
         margin: auto;
         width: 50%;
-        height: 100%; }
+        max-height: 70%; }
     .splash .right .portrait {
       position: absolute;
       background-image: url('/img/splash-portrait.jpg');
