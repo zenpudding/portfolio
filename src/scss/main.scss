@@ -264,7 +264,7 @@ p {
 				width: 80%;
 				max-width: 400px;
 			}
-			@media (min-width: 1024px) {
+			@media (min-width: 1400px) {
 				width: 400px;
 			}
 			.name {
@@ -277,7 +277,7 @@ p {
 				@media (min-width: 769px) {
 					font-size: 30px;
 				}
-				@media (min-width: 1024px) {
+				@media (min-width: 1400px) {
 					font-size: 34px;
 				}
 			}
@@ -290,7 +290,7 @@ p {
 				@media (min-width: 769px) {
 					font-size: 32px;
 				}
-				@media (min-width: 1024px) {
+				@media (min-width: 1400px) {
 					font-size: 40px;
 				}
 			}
@@ -307,7 +307,7 @@ p {
 				@media (min-width: 769px) {
 					padding-top: 8px;
 				}
-				@media (min-width: 1024px) {
+				@media (min-width: 1400px) {
 					font-size: 28px;
 					padding-top: 10px;
 				}
@@ -331,7 +331,7 @@ p {
 					@media (min-width: 769px) {
 						padding-right: 18px;
 					}
-					@media (min-width: 1024px) {
+					@media (min-width: 1400px) {
 						padding-right: 1em;
 					}
 				}
@@ -394,6 +394,26 @@ p {
 			@media (min-width: 769px) {
 				height: 380px;
 			}
+		}
+	}
+	.down-arrow {
+		@include transition(all 0.4s ease);
+		opacity: 0.8;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		bottom: 50px;
+		width: 100px;
+		cursor: pointer;
+		display: none;
+		@media (min-height: 769px) {
+			display: block;
+		}
+		&:hover {
+			opacity: 1;
+			width: 120px;
+			bottom: 40px;
 		}
 	}
 }

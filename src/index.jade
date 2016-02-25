@@ -20,13 +20,13 @@ html(lang="en")
       ul.page-links
         li
           .marker
-          a(href='/') ABOUT
+          a(href='#about-section') ABOUT
         li
           .marker
           a(href='/work/') WORK
         li
           .marker
-          a(href='/#contact-section') CONTACT
+          a(href='#contact-section') CONTACT
 
     .splash
       .left
@@ -36,18 +36,20 @@ html(lang="en")
             | UX &middot; VISUAL DESIGNER
           ul.splash-links
             li
-              a.active(href='/') ABOUT
+              a.active(href='#about-section') ABOUT
             li
               a(href='/work/') WORK
             li
               a(href='#contact-section') CONTACT
-
       .right
-        img.vid-overlay(src='img/dummy-white.svg')
+        img.vid-overlay(src='/img/dummy-white.svg')
         .vid
           video(class='splash-vid', autoplay='autoplay', loop='loop', poster='img/logo-poster.svg', src='img/home-anim-small.mp4', type='video/mp4', preload='auto')
         .portrait
+      a(href='#about-section')
+        img.down-arrow(src='/img/down-arrow.svg')
     
+    a(name='about-section')
     .section.about
       .block.dupe
         .text
