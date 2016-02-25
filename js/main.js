@@ -11,12 +11,19 @@ if (pathname == '/work/') {
 }
 
 $('.vid-overlay').addClass('active');
-// mouse over to trigger menu open
-$('.mousezone').mouseover( function() {
-	$('.menu').addClass('active');
-}).mouseleave( function() {
-	$('.menu').removeClass('active');
-});
+
+$('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 500);
+        return false;
+      }
+    }
+  });
 
 var lastScrollTop = 0;
 //menu show/hide

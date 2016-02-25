@@ -238,7 +238,7 @@ p {
         .splash .left .info {
           width: 80%;
           max-width: 400px; } }
-      @media (min-width: 1024px) {
+      @media (min-width: 1400px) {
         .splash .left .info {
           width: 400px; } }
       .splash .left .info .name {
@@ -251,7 +251,7 @@ p {
         @media (min-width: 769px) {
           .splash .left .info .name {
             font-size: 30px; } }
-        @media (min-width: 1024px) {
+        @media (min-width: 1400px) {
           .splash .left .info .name {
             font-size: 34px; } }
       .splash .left .info .title {
@@ -263,7 +263,7 @@ p {
         @media (min-width: 769px) {
           .splash .left .info .title {
             font-size: 32px; } }
-        @media (min-width: 1024px) {
+        @media (min-width: 1400px) {
           .splash .left .info .title {
             font-size: 40px; } }
       .splash .left .info ul.splash-links {
@@ -279,7 +279,7 @@ p {
         @media (min-width: 769px) {
           .splash .left .info ul.splash-links {
             padding-top: 8px; } }
-        @media (min-width: 1024px) {
+        @media (min-width: 1400px) {
           .splash .left .info ul.splash-links {
             font-size: 28px;
             padding-top: 10px; } }
@@ -303,7 +303,7 @@ p {
           @media (min-width: 769px) {
             .splash .left .info ul.splash-links a {
               padding-right: 18px; } }
-          @media (min-width: 1024px) {
+          @media (min-width: 1400px) {
             .splash .left .info ul.splash-links a {
               padding-right: 1em; } }
   .splash .right {
@@ -361,6 +361,27 @@ p {
       @media (min-width: 769px) {
         .splash .right .portrait {
           height: 380px; } }
+  .splash .down-arrow {
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    opacity: 0.8;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 50px;
+    width: 100px;
+    cursor: pointer;
+    display: none; }
+    @media (min-height: 769px) {
+      .splash .down-arrow {
+        display: block; } }
+    .splash .down-arrow:hover {
+      opacity: 1;
+      width: 120px;
+      bottom: 40px; }
 
 .section {
   width: 100%; }
