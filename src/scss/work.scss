@@ -175,6 +175,7 @@
 				display: block;
 				font-size: 24px;
 				padding: 0 20px;
+				position: relative;
 				@include vertical-align();
 				@media (min-width: 768px) {
 					padding: 0 40px;
