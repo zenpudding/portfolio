@@ -14,8 +14,6 @@ html(lang="en")
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
     script(src='js/main.js')
   body
-    //- .menu
-    //- .mousezone
     #menu
       .logo-icon
       .menu-label MENU
@@ -31,90 +29,68 @@ html(lang="en")
           a(href='/#contact-section') CONTACT
 
     .splash
-      .home-center
+      .left
+        .info
+          .name Kevin Zhou
+          .title
+            | UX &middot; VISUAL DESIGNER
+          ul.splash-links
+            li
+              a.active(href='/') ABOUT
+            li
+              a(href='/work/') WORK
+            li
+              a(href='#contact-section') CONTACT
+
+      .right
         img.vid-overlay(src='img/dummy-white.svg')
-        video(class='splash-vid', autoplay='autoplay', loop='loop', poster='img/logo-poster.svg', src='img/home-anim-small.mp4', type='video/mp4', preload='auto')
-        .splash-desc
-          | UX &middot; Visual Designer
-        .splash-desc-under Designer, Artist, Amoeba
-    .splash-buffer
-      .down-arrow
-        img(src='img/down-arrow.svg')
+        .vid
+          video(class='splash-vid', autoplay='autoplay', loop='loop', poster='img/logo-poster.svg', src='img/home-anim-small.mp4', type='video/mp4', preload='auto')
+        .portrait
     
-    .intro-block
-      h1 Hi, I'm Kevin
-      h2 I'm a mid 20s creative professional based in Atlanta, GA. Due to somewhat of an identity crisis, I do a lot of different things, making me an amoeba with balance of logic and aesthetic. 
-    
-    .design-container
-      a.block.ux
-        .info
-          .title Interaction Design
-          ul.sublist
-            li native apps
-            li responsive web
-            li front-end development
-          .go-dialog-box
-            .go-dialog
-              .d-icon
-                img(src='/img/projects-icon.svg')
-              .d-label
-                | VIEW </br> PROJECTS
-        //- .go-dialog-box
-        //-   .go-dialog
-        //-     .d-icon
-        //-       img(src='/img/projects-icon.svg')
-        //-     .d-label
-        //-       | VIEW </br> PROJECTS
-      a.block.vis
-        .info
-          .title Visual Design
-          ul.sublist
-            li apps and web
-            li illustration
-            li motion graphics
-          .go-dialog-box
-            .go-dialog
-              .d-icon
-                img(src='/img/projects-icon.svg')
-              .d-label
-                | VIEW </br> PROJECTS
-        //- .go-dialog-box
-        //-   .go-dialog
-        //-     .d-icon
-        //-       img(src='/img/projects-icon.svg')
-        //-     .d-label
-        //-       | VIEW </br> PROJECTS
+    .section.about
+      .block.dupe
+        .text
+          h2 ABOUT ME
+          p
+            | I'm a mid 20s creative professional based in Atlanta, GA. After getting my B.S. in Computational Media at Georgia Tech, I spent two years at <a href='http://digitalscientists.com/'>Digital Scientists</a> before becoming an indepent contractor.
+      .block
+        img(src='/img/about-img.jpg')
+      .block.dupe
+        .text
+          h2 ABOUT ME
+          p
+            | I'm a mid 20s creative professional based in Atlanta, GA. After getting my B.S. in Computational Media at Georgia Tech, I spent two years at <a href='http://digitalscientists.com/'>Digital Scientists</a> before becoming an indepent contractor.
 
-    .mid-block
-      h2 Besides the above disciplines, many of my personal interests have often found their way into my work. These range from photo/videography to digital illustration and animation.
+    .section.about2
+      .block
+        .text
+          h2 WHAT I DO
+          p
+            | A variety of things, really. I mostly design for apps and web products, creating wireframes, prototypes, and mockups. Branching off, I also do a little logo design, front-end development, and video production.
+          a.button(href='/work/') VIEW PROJECTS
+      .block
+        img(src='/img/about-img-2.jpg')
 
-    .misc-container
-      .block.photovid
-        img(src='/img/misc-photo.jpg')
-      a.block.comic(href='http://tapastic.com/series/Eggs-on-Sale')
-        .comic-link WEBCOMIC
-        .block-overlay
-        img(src='/img/misc-comic.jpg')
-      .block.illus
-        img(src='/img/misc-snail.jpg')
-
-    .contact-block
-      h2
-        | Let's chat! You can contact me via email at <a class='email-link'>qkzhou27@gmail.com</a> or <a class='linkedin-link' href='http://linkedin.com/in/qkzhou'>linkedin</a>
+    .section.about3
+      .block.dupe
+        .text
+          h2 THINGS I LIKE
+          p
+            | Many of my personal interests have often found their way into my work, ranging from photo/videography to digital illustration and animation. I also publish a webcomic, which you can read on <a href='http://tapastic.com/series/Eggs-on-Sale'>Tapastic</a>.
+      .block
+        img(src='/img/about-img-3.jpg')
+      .block.dupe
+        .text
+          h2 THINGS I LIKE
+          p
+            | Many of my personal interests have often found their way into my work, ranging from photo/videography to digital illustration and animation. I also publish a webcomic, which you can read on <a href='http://tapastic.com/series/Eggs-on-Sale'>Tapastic</a>.
 
     a(name='contact-section')
     .footer
+      .contact-block
+        | Let's chat! You can contact me via email at <a class='email-link'>qkzhou27@gmail.com</a> or <a class='linkedin-link' href='http://linkedin.com/in/qkzhou'>linkedin</a>
       .contact-button GET IN TOUCH
-      ul.social-links
-        li
-          a#linkedin(href='http://linkedin.com/in/qkzhou')
-            img(src='img/linked_in.svg')
-        li
-          a#github(href='http://github.com/zenpudding')
-            img(src='img/github.svg')
-        li
-          a#mail-to(href='mailto:zenpudding@gmail.com')
-            img(src='img/mail-icon.svg')
       .end-msg designed and built by Kevin Zhou
     textarea.email-select qkzhou27@gmail.com
 
