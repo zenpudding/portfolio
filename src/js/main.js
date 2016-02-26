@@ -99,11 +99,11 @@ var openModal = function(pagepath) {
 
 var closeModal = function() {
 	$('#m-overlay').removeClass('small');
-	setTimeout(function() {$('#modal-content').empty(); }, 500);
-	setTimeout(function() {$('.m-close').removeClass('active'); }, 500);
-	setTimeout(function() {$('#m-overlay').removeClass('active'); }, 1000);
-	setTimeout(function() {$('#modal').removeClass('active'); }, 1000);
-	setTimeout(function() {$('body').removeClass('modal-open') }, 500);
+	setTimeout(function() {$('#modal-content').empty(); }, 400);
+	setTimeout(function() {$('.m-close').removeClass('active'); }, 400);
+	setTimeout(function() {$('#m-overlay').removeClass('active'); }, 410);
+	setTimeout(function() {$('#modal').removeClass('active'); }, 410);
+	setTimeout(function() {$('body').removeClass('modal-open') }, 410);
 }
 
 //load modal on work page

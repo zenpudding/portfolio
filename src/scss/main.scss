@@ -133,8 +133,8 @@ p {
 	.logo-icon {
 		background: url('/img/menu-icon.svg') no-repeat;
 		background-size: contain;
-		width: 70px;
-		height: 70px;
+		width: 60px;
+		height: 60px;
 		@media (min-width: 768px) {
 			width: 100px;
 			height: 100px;
@@ -152,7 +152,7 @@ p {
 		@include transition(opacity 0.5s ease);
 		font-size: 18px;
 		text-align: center;
-		width: 70px;
+		width: 60px;
 		height: 1.5em;
 		line-height: 1.5em;
 		margin: 5px 0 5px;
@@ -174,7 +174,7 @@ p {
 		@media (min-width: 768px) {
 			@include transition(all 0.5s ease);
 		}
-		font-size: 36px;
+		font-size: 24px;
 		font-weight: 300;
 		list-style: none;
 		padding-left: 0;
@@ -182,9 +182,10 @@ p {
 		margin: 0;
 		box-shadow: 8px 8px 9px rgba(120,120,120,0.1);
 		height: 0;
-		width: 250px;
-		@media (min-width: 514px) {
+		width: 200px;
+		@media (min-width: 768px) {
 			width: 380px;
+			font-size: 36px;
 		}
 		li {
 			@include transition(all 0.4s ease);

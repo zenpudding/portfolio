@@ -277,8 +277,8 @@
 		li {
 			display: inline-block;
 			font-size: 18px;
-			color: #333;
-			background: #ddd;
+			color: #999;
+			border: 1px solid #ddd;
 			padding: 0.5em 1.5em;
 			margin-top: 0.3em;
 			max-width: 10em;
@@ -380,7 +380,7 @@ p.m-close {
 }
 
 #m-overlay {
-	@include transition(all 0.5s ease);
+	@include transition(all 0.4s ease);
 	position: fixed;
 	width: 100%;
 	height: 0;
