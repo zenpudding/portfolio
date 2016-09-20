@@ -187,9 +187,9 @@ $green: #6cc989;
 				@media (min-width: 768px) {
 					padding: 0 40px;
 					font-size: 28px;
+					position: absolute;
 				}
 				@media (min-width: 1024px) {
-					position: absolute;
 					display: inline-block;
 					@include vertical-align();
 					font-size: 34px;

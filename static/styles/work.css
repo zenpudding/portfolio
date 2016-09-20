@@ -154,10 +154,10 @@
         @media (min-width: 768px) {
           .work-container .work-item .work-info-wrap .work-info {
             padding: 0 40px;
-            font-size: 28px; } }
+            font-size: 28px;
+            position: absolute; } }
         @media (min-width: 1024px) {
           .work-container .work-item .work-info-wrap .work-info {
-            position: absolute;
             display: inline-block;
             top: 50%;
             -webkit-transform: translateY(-50%);
