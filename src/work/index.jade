@@ -33,29 +33,36 @@ html(lang="en")
     .work-container
       input(type='radio' id='all' name='type' checked)
       label(for='all') ALL
-      input(type='radio' id='ux' name='type')
-      label(for='ux') UX
-      input(type='radio' id='visual' name='type')
-      label(for='visual') VISUAL
+      input(type='radio' id='design' name='type')
+      label(for='design') DESIGN
+      input(type='radio' id='dev' name='type')
+      label(for='dev') DEVELOPMENT
       input(type='radio' id='misc' name='type')
       label(for='misc') MISC
       .buffer
 
-      .work-item.ds-site.not-ux.not-misc
+      .work-item.gng.not-design.not-misc
+        a
+        img(src='/img/work-gng.svg')
+        .work-info-wrap
+          .work-info
+            .work-title GEORGIA NATURAL GAS
+            .work-desc web development for site refresh
+      .work-item.ds-site.not-dev.not-misc
         a
         img(src='/img/work-ds-blue.svg')
         .work-info-wrap
           .work-info
             .work-title DIGITAL SCIENTISTS SITE UPDATES
             .work-desc company and blog page redesign
-      .work-item.eprove.not-misc
+      .work-item.eprove.not-dev.not-misc
         a
         img(src='/img/work-eprove.svg')
         .work-info-wrap
           .work-info
             .work-title ePROVE APP SUITE
             .work-desc software platform for school improvement
-      .work-item.source.not-ux.not-misc
+      .work-item.source.not-dev.not-misc
         a
         img(src='/img/work-source.svg')
         .work-info-wrap
@@ -69,28 +76,28 @@ html(lang="en")
           .work-info
             .work-title NAPA KNOW HOW
             .work-desc temporary makeover of mobile site and app
-      .work-item.hubbell.not-vis.not-misc
+      .work-item.hubbell.not-dev.not-misc
         a
         img(src='/img/work-hubbell.svg')
         .work-info-wrap
           .work-info
             .work-title HPS SELECT - CONNECTOR SELECTOR
             .work-desc new feature to Hubbell catalog app
-      .work-item.video.not-ux.not-vis
+      .work-item.video.not-dev.not-vis
         a
         img(src='/img/work-video.svg')
         .work-info-wrap
           .work-info
             .work-title ASSORTED VIDEOGRAPHY
             .work-desc samples of video and film work
-      .work-item.anim.not-ux.not-vis
+      .work-item.anim.not-dev.not-vis
         a
         img(src='/img/work-anim.svg')
         .work-info-wrap
           .work-info
             .work-title ASSORTED ANIMATION
             .work-desc samples of motion graphics and animation work
-      .work-item.comic.not-ux.not-vis
+      .work-item.comic.not-design.not-dev
         a
         img(src='/img/work-comic.svg')
         .work-info-wrap
