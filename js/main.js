@@ -107,6 +107,10 @@ var closeModal = function() {
 }
 
 //load modal on work page
+$('.gng').click(function(){
+	openModal('/work/gng.html');
+});
+
 $('.ds-site').click(function(){
 	openModal('/work/ds-site.html');
 });
