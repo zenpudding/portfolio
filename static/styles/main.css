@@ -91,14 +91,14 @@ p {
       width: 380px; } }
   #menu.expanded .logo-icon {
     opacity: 0.8;
-    background-image: url('/img/menu-close.svg'); }
+    background-image: url("/img/menu-close.svg"); }
   #menu.expanded ul.page-links {
     height: 9em;
     opacity: 1; }
     #menu.expanded ul.page-links a {
       display: block; }
   #menu .logo-icon {
-    background: url('/img/menu-icon.svg') no-repeat;
+    background: url("/img/menu-icon.svg") no-repeat;
     background-size: contain;
     width: 60px;
     height: 60px;
@@ -352,7 +352,7 @@ p {
         max-height: 70%; }
     .splash .right .portrait {
       position: absolute;
-      background-image: url('/img/splash-portrait.jpg');
+      background-image: url("/img/splash-portrait.jpg");
       background-size: cover;
       background-position: center;
       width: 100%;
