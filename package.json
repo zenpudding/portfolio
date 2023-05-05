@@ -7,6 +7,7 @@
     "browser-sync": "^2.29.1",
     "copyfiles": "^2.4.1",
     "del-cli": "^5.0.0",
+    "gh-pages": "^5.0.0",
     "node-sass": "^8.0.0",
     "pug": "^3.0.2"
   },
@@ -19,7 +20,8 @@
     "copy-other": "copyfiles --flat src/.htaccess src/CNAME src/favicon.ico static",
     "clean": "del-cli static",
     "serve": "browser-sync start --server \"static\" --files \"static\"",
-    "build": "npm run clean && npm run pug && npm run scss && npm run copy-img && npm run copy-js && npm run copy-other"
+    "build": "npm run clean && npm run pug && npm run scss && npm run copy-img && npm run copy-js && npm run copy-other",
+    "deploy": "gh-pages -d static"
   },
   "repository": {
     "type": "git",
@@ -30,5 +32,5 @@
   "bugs": {
     "url": "https://github.com/zenpudding/portfolio/issues"
   },
-  "homepage": "https://github.com/zenpudding/portfolio"
+  "homepage": "https://zenpudding.github.io/portfolio"
 }
