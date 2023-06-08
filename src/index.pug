@@ -14,15 +14,17 @@ html(lang="en")
     script(src='js/main.js')
   body
     nav
-      .title
-        .icon--menu
-          include img/icon--menu.svg
-        span.title-a zevin
-        span.title-b .work
+      .nav-top
+        a.title
+          .icon--menu
+            include img/icon--menu.svg
+          span.title-a zevin
+          span.title-b .work
+        button.nav-contact contact
       .nav-links
         ul.nav-link-group
-          button.contact-link.nav-link-item Contact
-            .icon--copy
+          //- button.contact-link.nav-link-item Contact
+          //-   .icon--copy
           li
             a.nav-link-item.active
               span.nav-link-item--text About
