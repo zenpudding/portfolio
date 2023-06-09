@@ -14,53 +14,56 @@ html(lang="en")
     script(src='js/main.js')
   body
     nav
-      .nav-top
-        a.title
-          .icon--menu
-            include img/icon--menu.svg
-          span.title-a zevin
-          span.title-b .work
-        button.nav-contact contact
-      .nav-links
-        ul.nav-link-group
-          //- button.contact-link.nav-link-item Contact
-          //-   .icon--copy
-          li
-            a.nav-link-item.active
-              span.nav-link-item--text About
-        ul.nav-link-group
-          .nav-category WORK
-          li
-            a.nav-link-item
-              span.nav-link-item--text Bluemine
-              span.nav-link-item--tag IBM
-          li
-            a.nav-link-item
-              span.nav-link-item--text Verity
-              span.nav-link-item--tag IBM
-          li
-            a.nav-link-item
-              span.nav-link-item--text Apex design system
-              span.nav-link-item--tag IBM
-          li
-            a.nav-link-item
-              span.nav-link-item--text Agency work
-              span.nav-link-item--tag Misc
-        ul.nav-link-group
-          .nav-category ART
-          li
-            a.nav-link-item
-              span.nav-link-item--text Cupid 9-5
-              span.nav-link-item--tag Comic
-          li
-            a.nav-link-item
-              span.nav-link-item--text Eggs on Sale
-              span.nav-link-item--tag Comic
-          
-        ul.nav-link-group
-          li
-            a.nav-link-item
-              span.nav-link-item--text Resume
+      .nav-content-block
+        .nav-top
+          a.title
+            .icon--menu
+              include img/icon--menu.svg
+            .icon--close
+              include img/icon--close.svg
+            span.title-a zevin
+            span.title-b .about
+          button.nav-contact contact
+        .nav-links
+          ul.nav-link-group
+            //- button.contact-link.nav-link-item Contact
+            //-   .icon--copy
+            li
+              a.nav-link-item.active
+                span.nav-link-item--text About
+          ul.nav-link-group
+            .nav-category WORK
+            li
+              a.nav-link-item
+                span.nav-link-item--text Bluemine
+                span.nav-link-item--tag IBM
+            li
+              a.nav-link-item
+                span.nav-link-item--text Verity
+                span.nav-link-item--tag IBM
+            li
+              a.nav-link-item
+                span.nav-link-item--text Apex design system
+                span.nav-link-item--tag IBM
+            li
+              a.nav-link-item
+                span.nav-link-item--text Agency work
+                span.nav-link-item--tag Misc
+          ul.nav-link-group
+            .nav-category ART
+            li
+              a.nav-link-item
+                span.nav-link-item--text Cupid 9-5
+                span.nav-link-item--tag Comic
+            li
+              a.nav-link-item
+                span.nav-link-item--text Eggs on Sale
+                span.nav-link-item--tag Comic
+            
+          ul.nav-link-group
+            li
+              a.nav-link-item
+                span.nav-link-item--text Resume
     
     .main
       //- p main content container

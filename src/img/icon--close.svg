@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L20 0L20 20L0 20L0 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="icon--close" clip-path="url(#clip_1)">
+    <path d="M0 0L20 0L20 20L0 20L0 0Z" id="icon--close" fill="none" fill-rule="evenodd" stroke="none" />
+    <path d="M2 2L18 18" id="Line" fill="none" fill-rule="evenodd" stroke="#87E2CA" stroke-width="2" stroke-linecap="round" />
+    <path d="M2 18L18 2" id="Line-2" fill="none" fill-rule="evenodd" stroke="#87E2CA" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>
