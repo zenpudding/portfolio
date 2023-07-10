@@ -8,10 +8,12 @@
 
 //colors
 $color--primary: #87E2CA;
+$color--primary-faded: #B4EDDF;
 
-$color--bg: #272727;
+$color--bg: #2C2C2C;
 
 $color--whitetext: #eee;
+$color--paragraph: #ddd;
 $color--graytext: #999;
 
 $color--active: #373737;
@@ -22,6 +24,7 @@ $screen__sm: 512px;
 $screen__md: 800px;
 $screen__lg: 1024px;
 $screen__xl: 1280px;
+$screen__xxl: 1440px;
 
 @mixin screen__sm {
   @media only screen and (min-width: $screen__sm) {
@@ -47,6 +50,12 @@ $screen__xl: 1280px;
   }
 }
 
+@mixin screen__xxl {
+  @media only screen and (min-width: $screen__xxl) {
+    @content;
+  }
+}
+
 //hover mixin to detect hover capability
 @mixin hoverable {
   @media (hover: hover) {
@@ -64,6 +73,25 @@ html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
+}
+
+// text styles
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: $color--whitetext;
+  margin-top: 0;
+}
+
+strong {
+  font-weight: 400;
+  color: $color--primary-faded;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.32;
+  color: $color--paragraph;
 }
 
 button {
@@ -89,10 +117,15 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: $color--bg;
   overflow: hidden;
   box-sizing: border-box;
   border-bottom: 1px solid #555;
   transition: height .5s ease;
+
+  .nav-content-block {
+    width: 100%;
+  }
 
   .nav-top {
     display: flex;
@@ -101,7 +134,7 @@ nav {
 
   .title {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     font-size: 1.5rem;
     cursor: pointer;
 
@@ -117,7 +150,7 @@ nav {
 
     .icon--menu, icon--close {
       position: absolute;
-      left: 1rem;
+      left: 1.5rem;
       top: 1.125rem;
       transition: opacity .25s ease-out;
     }
@@ -128,7 +161,7 @@ nav {
 
     .title-a {
       height: 1.5rem;
-      margin-left: .75rem;
+      margin-left: 1rem;
     }
 
     .title-b {
@@ -160,11 +193,11 @@ nav {
 
     .nav-link-group {
       list-style: none;
-      margin: 0;
-      padding: 1.5rem 0 0;
+      padding: 0;
+      margin: 1.5rem 0 0;
 
       .nav-category {
-        margin: .5rem 1.25rem;
+        padding: .5rem 1.5rem;
         color: $color--graytext;
         font-size: 1rem;
       }
@@ -174,7 +207,7 @@ nav {
       display: block;
       position: relative;
       width: 100%;
-      padding: .75rem 0;
+      padding: .75rem 1.5rem;
       font-size: 1.25rem;
       transition: background-color .17s ease-out;
       box-sizing: border-box;
@@ -198,7 +231,6 @@ nav {
       }
 
       .nav-link-item--text {
-        margin-left: 1.25rem;
         vertical-align: middle;
       }
 
@@ -237,11 +269,13 @@ nav {
 
   // fixed width at larger breakpoints
   @include screen__md {
+    overflow: auto;
     width: auto;
-    overflow: initial;
     height: 100vh;
+    padding-top: 10vh;
     border-bottom: none;
     border-right: 1px solid #555;
+    box-sizing: border-box;
 
     .nav-content-block {
       width: 280px;
@@ -261,25 +295,96 @@ nav {
     }
   }
 
-  @include screen__lg {
-    padding: 2rem;
+  // @include screen__lg {
+  //   padding: 10vh 2rem 1.5rem;
+  // }
+
+  @include screen__xl {
+    padding: 16vh 3rem 1.5rem;
+    // margin-left: 12vw;
 
     .nav-content-block {
       width: 320px;
     }
   }
 
-  @include screen__xl {
-    padding: 3rem;
-    padding-left: 12vw;
+  @include screen__xxl {
+    margin-left: 8vw;
   }
 
 }
 
 .main {
   width: 100%;
+  padding: 8rem 1.5rem 2rem;
+  box-sizing: border-box;
+
+  p {
+    margin: 0 0 2rem;
+  }
+
+  img {
+    width: 100%;
+    margin: 0 0 2rem;
+  }
+
+  .img-group {
+    padding: 1rem 0;
+  }
+
+  .subtitle {
+    display: block;
+    margin-top: .5rem;
+    font-size: 2rem;
+    color: $color--graytext;
+  }
+
+  ul {
+    font-size: 1.125rem;
+    line-height: 1.2;
+  }
 
   @include screen__md {
     width: 480px;
+    margin-left: calc(280px + 1rem);
+    padding-top: calc(10vh + .4rem);
+
+    .subtitle {
+      display: inline;
+      margin-top: 0;
+      margin-left: .75rem;
+    }
+  }
+
+  @include screen__lg {
+    width: 640px;
+    margin-left: calc(280px + 3rem);
+    padding-top: 10vh;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  @include screen__xl {
+    width: 720px;
+    margin-left: calc(320px + 6rem + 4rem);
+    padding-top: 16vh;
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    ul {
+      font-size: 1.25rem;
+    }
+  }
+
+  @include screen__xxl {
+    margin-left: calc(320px + 8vw + 10rem);
   }
 }
