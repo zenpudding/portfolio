@@ -1,0 +1,40 @@
+@use 'variables' as *;
+
+@mixin screen__sm {
+  @media only screen and (min-width: $screen__sm) {
+    @content;
+  }
+}
+
+@mixin screen__md {
+  @media only screen and (min-width: $screen__md) {
+    @content;
+  }
+}
+
+@mixin screen__lg {
+  @media only screen and (min-width: $screen__lg) {
+    @content;
+  }
+}
+
+@mixin screen__xl {
+  @media only screen and (min-width: $screen__xl) {
+    @content;
+  }
+}
+
+@mixin screen__xxl {
+  @media only screen and (min-width: $screen__xxl) {
+    @content;
+  }
+}
+
+//hover mixin to detect hover capability
+@mixin hoverable {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

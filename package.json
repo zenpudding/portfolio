@@ -9,15 +9,15 @@
     "copyfiles": "^2.4.1",
     "del-cli": "^5.0.0",
     "gh-pages": "^5.0.0",
-    "node-sass": "^8.0.0",
+    "sass": "^1.63.6",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "postcss-cli": "^10.1.0",
     "pug": "^3.0.2"
   },
   "scripts": {
-    "pug": "pug --pretty -o static src",
-    "scss": "node-sass -o static/styles src/scss && postcss -u autoprefixer -r static/styles/*.css",
+    "pug": "pug --pretty -o static src/views static/",
+    "scss": "sass --no-source-map src/scss:static/styles  && postcss -u autoprefixer -r static/styles/*.css",
     "copy-fonts": "copyfiles --flat src/fonts/* static/fonts",
     "copy-img": "copyfiles --flat src/img/* static/img",
     "copy-js": "copyfiles --flat src/js/* static/js",

@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+@font-face {
+  font-family: 'League Spartan Variable';
+  src: url('../fonts/LeagueSpartan-VF.woff2') format('woff2-variations');
+  font-weight: 200 900;
+}
+
+//colors
+$color--primary: #87E2CA;
+$color--primary-faded: #B4EDDF;
+
+$color--bg: #2C2C2C;
+
+$color--whitetext: #eee;
+$color--paragraph: #ddd;
+$color--graytext: #999;
+
+$color--graybutton: #373737;
+$color--grayhover: #474747;
+
+//breakpoints
+$screen__sm: 512px;
+$screen__md: 800px;
+$screen__lg: 1024px;
+$screen__xl: 1280px;
+$screen__xxl: 1440px;
