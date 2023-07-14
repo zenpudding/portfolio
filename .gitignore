@@ -1,5 +1,0 @@
-node_modules
-static/
-.publish
-*.db
-package-lock.json
