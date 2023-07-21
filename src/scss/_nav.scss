@@ -12,6 +12,7 @@ nav {
   box-sizing: border-box;
   border-bottom: 1px solid #555;
   transition: height .5s ease;
+  z-index: 5;
 
   .nav-content-block {
     width: 100%;

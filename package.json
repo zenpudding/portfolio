@@ -24,10 +24,10 @@
     "copy-other": "copyfiles --flat src/.htaccess src/CNAME src/favicon.ico static",
     "copy-rest": "npm run copy-fonts && npm run copy-img && npm run copy-js && npm run copy-other",
     "clean": "del-cli static",
-    "watch-pug": "onchange \"src/*.pug\" -- npm run pug",
+    "watch-pug": "onchange \"src/**/*.pug\" -- npm run pug",
     "watch-scss": "onchange \"src/scss\" -- npm run scss",
     "watch-js": "onchange \"src/js\" -- npm run copy-js",
-    "serve": "browser-sync start --server \"static\" --files \"static\"",
+    "serve": "browser-sync start --server \"static\" --serveStatic \"static\" --files \"static\" --extensions \"html\"",
     "build": "npm run clean && npm run pug && npm run scss && npm run copy-rest",
     "start": "npm run build && run-p watch-* serve",
     "deploy": "gh-pages -d static"

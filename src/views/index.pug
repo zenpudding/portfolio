@@ -4,11 +4,13 @@ html(lang="en")
     include ../partials/_nav.pug
     
     .main
-      h1 Hi, I'm Zevin
-        span.subtitle (<strong>Z</strong>hou + K<strong>evin</strong>)
+      .home-title
+        h1 Hi, I'm Zevin
+          span.subtitle (<strong>Z</strong>hou + K<strong>evin</strong>)
+          
       p I'm a Product Designer who's a bit of a generalist. As someone who cares deeply about how and why things are made, I've somehow repeatedly found myself contributing in practices firmly adjacent of my main practice of UX/UI Design. Some examples include:
   
-      .img-group
+      figure.img-group
         img(src='/img/img--comic-1.png')
         img(src='/img/img--comic-2.png')
         img(src='/img/img--comic-3.png')
@@ -17,7 +19,7 @@ html(lang="en")
       
       p In short, I'm a designer whose had hands in pretty much all parts of the product development pipeline. I don't necessarily recommend doing all of the above at once, but it has made me confident in contributing in many different disciplines.
 
-      .img-group
+      figure.img-group
         img(src='/img/img--comic-4.png')
           
       p When I'm not working in design/dev, I enjoy making art and playing games. Lately I've been learning some aspects of game development, including 3D modeling, character rigging, and Unreal Engine.
@@ -25,6 +27,6 @@ html(lang="en")
       p I currently live in the greater Atlanta area with my wife and dog, but lately we've been looking to move to the West Coast or Pacific Northwest. If you'd like to chat, please reach out at [professional email].
 
       .prev-next
-        a.next-button
+        a.next-button(href='bluemine.html')
           span.next-button__label NEXT
           span.next-button__text Work - Bluemine
