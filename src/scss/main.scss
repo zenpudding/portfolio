@@ -45,8 +45,23 @@ button {
 }
 
 a {
-    color: $color--whitetext;
-    text-decoration: none;
+  color: $color--whitetext;
+  text-decoration: none;
+}
+
+.link {
+	color: $color--primary;
+	font-weight: 500;
+	text-decoration: underline;
+	// text-decoration-thickness: .125rem;
+	text-underline-offset: .2rem;
+
+	@include hoverable {
+		color: $color--primary-faded;
+		text-decoration-thickness: .15rem;
+		transition: color 1s ease;
+	}
+
 }
 
 body {
@@ -120,17 +135,18 @@ body {
     margin: 0 0 2rem;
 		border-radius: .5rem;
 
-		&:last-child {
+		&:last-of-type {
 			margin: 0;
 		}
   }
 
 	.annotation {
-		background-color: $color--darkerbg;
-		padding: 1.25rem;
+		background-color: $color--lighterbg;
+		// border: 1px solid $color--outline-light;
+		padding: 3rem 1.25rem 1.25rem;
 		line-height: 1.2;
 		border-radius: .5rem;
-		margin-top: -.5rem;
+		margin-top: -1.5rem;
 		font-size: 1.125rem;
 	}
 
@@ -289,7 +305,9 @@ body {
 
 		.annotation {
 			font-size: 1.4rem;
-			padding: 1.5rem;
+			line-height: 1.32;
+			padding: 3rem 2rem 2rem;
+			margin-top: -1rem;
 		}
   }
 
