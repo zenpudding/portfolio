@@ -1,0 +1,42 @@
+html(lang="en")
+  include ../partials/_header.pug
+  body
+    include ../partials/_nav.pug
+    
+    .main
+      .work-hero
+        h1 Agency work
+          .hero-tag Misc
+          //- .hero-icon
+          //-   include ../img/icon--verity.svg
+        .work-hero-desc An assortment of past projects
+        
+      p Before joining IBM, I worked at a few agencies and another large corporation. Below are a few examples of my work from those early years.
+
+      figure.img-group
+        img(src='/img/img--agency-eprove.png')
+        figcaption.annotation #[em AdvancEd: eProve (~2014-2015)], agency: Digital Scientists#[br]#[br]I was one of two designers who worked on AdvancEd(now #[a.link(href='https://www.cognia.org/' target='_blank') Cognia])'s suite of apps for school accreditation and improvement. #[em Eleot] is a classroom observation tool and #[em Surveys] is a survey builder tool, both of which were paper-based before we were brought on to translate into an app ecosystem.#[br]#[br]I also established the branding, starting with the general app suite icon and first two apps we worked on. The other ones were given placeholder icons with a style ready for extrapolation when the time came. You can read the full case study #[a.link(href='https://digitalscientists.com/case-studies/advanced/' target='_blank') here].
+          
+      figure.img-group
+        img(src='/img/img--agency-source.png')
+        figcaption.annotation #[em AdvancEd: Source (~2014-2015)], agency: Digital Scientists#[br]#[br]In additional to design work on their app suite, we were also brought on to redesign AdvancEd's quarterly publication #[em Source]. Most of my work on this was dedicated to branding.#[br]#[br]Being an extremely small budget side project, it only allowed for a few short iterations to land on a simple icon and wordmark. The bottom image is a set of alternate icon concepts that didn't make the cut, but that I personally liked.
+      
+      figure.img-group
+        img(src='/img/img--agency-napa@2x.png')
+        figcaption.annotation #[em NAPA Know How (~2015)], agency: Digital Scientists#[br]#[br]This one's kind of funny. Napa Auto Part's app, 'Know How' wasn't doing great in the app store due to iOS/Android updates breaking things, and we were brought on to perform a band-aid fix before another agency did a complete overhaul. There were issues with touching the source code, so we literally just wrapped the existing site code and inserted javascript to clean up the html/css and add some cleaner UX.#[br]#[br]Weirdly enough, I was tasked with the writing of this javascript, even as a Designer. I did the best I could using a chrome extension to test on their production site, with the crazy limitation of only being able to work with what was already there. The full case study is #[a.link(href='https://digitalscientists.com/case-studies/napa/' target='_blank') here], though it doesn't quite fully reflect my own wacky but proud memories of this weird project.
+          
+      figure.img-group
+        img(src='/img/img--agency-gng.jpg')
+        figcaption.annotation #[em Georgia Natural Gas (2016)], agency: Macquarium#[br]#[br]During my short term contract position with Macquarium, I was hired to provide design support for their redesign and development of Georgia Natural Gas's site and marketing materials. Things took a bit of a turn, however, when front-end development was found to be lagging behind deadlines. Having some basic front-end experience, I volunteered to help out and ended up leading much of the front-end development effort.#[br]#[br]Aside from doing plenty of QA on half finished views, I ended up completely rewriting pieces like the main navigation (which is funny to see still being #[a.link(href='https://www.gng.com/' target='_blank') used today]) as well as responsive behavior. Again, full case study can be found #[a.link(href='https://www.macquarium.com/work-gng' target='_blank') here].
+
+      p
+        
+      .prev-next
+        a.prev-button(href='bluemine.html')
+          span.prev-next-button__label PREV
+          span.prev-next-button__text Bluemine
+        a.next-button(href='cupid95.html')
+          span.prev-next-button__label NEXT
+          span.prev-next-button__text Cupid 9-5
+          .prev-next-icon
+            //- include ../img/icon--bm.svg

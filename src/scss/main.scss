@@ -25,6 +25,10 @@ strong {
   color: $color--primary-faded;
 }
 
+em {
+	font-weight: 500;
+}
+
 p {
   font-size: 1.125rem;
   line-height: 1.32;
@@ -53,7 +57,7 @@ a {
 	color: $color--primary;
 	font-weight: 500;
 	text-decoration: underline;
-	// text-decoration-thickness: .125rem;
+	text-decoration-thickness: .1rem;
 	text-underline-offset: .2rem;
 
 	@include hoverable {
@@ -180,35 +184,78 @@ body {
   .prev-next {
     width: 100%;
     display: flex;
+		// justify-content: space-between;
 
-    .next-button, .previous-button {
+    .next-button, .prev-button {
+			position: relative;
       background-color: $color--graybutton;
-      padding: 1.75rem;
+      padding: 1.25rem;
       border-radius: .5rem;
       cursor: pointer;
-      width: 100%;
 
       @include hoverable {
         background-color: $color--grayhover;
       }
+
+			@include screen__xl {
+				padding: 1.75rem;
+			}
     }
+
+		.prev-button {
+			display: none;
+			margin-right: 1rem;
+			float: left;
+			background-color: $color--bg;
+
+			@include screen__sm {
+				display: block;
+				width: 8rem;
+			}
+		}
 
     .next-button {
-      max-width: 24rem;
+			width: 100%;
+      max-width: 18rem;
 
-      .next-button__label {
-        display: block;
-        font-size: 1rem;
-        color: $color--graytext;
-        margin-bottom: .5rem;
-      }
-
-      .next-button__text {
-        display: block;
-        font-size: 1.5rem;
-        color: $color--whitetext;
-      }
+			@include screen__xl {
+				max-width: 26rem;
+			}
     }
+
+		.prev-next-button__label {
+			display: block;
+			font-size: .875rem;
+			color: $color--graytext;
+			margin-bottom: .5rem;
+
+			@include screen__xl {
+				font-size: 1rem;
+			}
+		}
+
+		.prev-next-button__text {
+			display: block;
+			font-size: 1.25rem;
+			color: $color--whitetext;
+
+			@include screen__xl {
+				font-size: 1.5rem;
+			}
+		}
+
+		.prev-next-icon {
+			position: absolute;
+			width: 2rem;
+			top: 1.5rem;
+			right: 1.25rem;
+
+			@include screen__xl {
+				width: 2.5rem;
+				top: 2rem;
+				right: 1.75rem;
+			}
+		}
   }
 
   @include screen__md {

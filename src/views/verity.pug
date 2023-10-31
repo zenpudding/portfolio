@@ -1,0 +1,42 @@
+html(lang="en")
+  include ../partials/_header.pug
+  body
+    include ../partials/_nav.pug
+    
+    .main
+      .work-hero
+        h1 Verity
+          .hero-tag IBM
+          .hero-icon
+            include ../img/icon--verity.svg
+        .work-hero-desc Solo design on ML-driven research tool
+        
+      p A few years into my time at IBM's Market Development and Insights department, I moved to a team dubbed 'MDI Labs' as its sole designer. The smaller team of market analysts, data scientists, and developers focused on rapid prototyping of experimental tools for internal(and potentially external) use.#[br]#[br]One of the apps that gained significant momentum was Verity, a tool that scoured market analysis reports for 'gems' -- key phrases and figures -- to help facilitate research. It did so via machine learning and some manual training where sentences were given a score based on their informational value. Basically, it was a specialized tool for generating highlights from documents.
+      
+      figure.img-group
+        img(src='/img/img--verity-home@2x.png')
+      
+      p I did all the design work for Verity through several iterations, although much of it was facilitated by a company-wide migration to #[a.link(href='https://carbondesignsystem.com/' target='_blank') Carbon Design System]. All of the MDI Labs projects were heavily UXR driven, so I also helped lead much of the rounds of research along with support from the UXR lead from the main design team.#[br]#[br]The beta release of Verity focused on gem search and saving, with future improvements planned for setup of automated feeds based on input parameters. Also in the works were more batch jobs compiling popular items and a personalization algorithm to populate a user's home feed. All in all, Verity was meant to be a lightweight app meant to do one thing well -- to facilitate research by surfacing high value statements and figures.
+
+      figure.img-group
+        img(src='/img/img--verity-condensed@2x.png')
+        img(src='/img/img--verity-expanded@2x.png')
+        figcaption.annotation We began with a 1:1 layout of cards to detail pane, focusing on speed of browsing and hopping between cards. This meant, however, that icon-only controls were less immediately readable, and some integral pieces of information(such as the entire segment with the Verity Score) were placed a few scrolls down.#[br]#[br]Eventually, we decided on having the expanded view be the default, as it better presented value and app functionality off the bat. The improved readability and presence of the detail pane controls also meant that users were more aware of the option to switch to the more fast-browsing mode of the condensed view.#[br]#[br]At max size breakpoints, there was enough space to show the expanded view without using the overlay.
+        
+      p When I outlined Verity's #[a.link(href='/img/img--verity-board.png' target='_blank') basic UI structure] in accordance to general Carbon guidelines, the mixed approach I settled on became a personal favorite of mine going forward -- fluid width up to medium breakpoint, then left-aligned fixed width containers all spaced to a soft grid of 8/16px(or .5/1rem). Of course, this mostly applies to layouts where optimal reading length applies. This portfolio site follows a similar structure, with extra spacing on the left before the navigation to account for wide screens to better center the content.
+      
+      figure.img-group
+        img(src='/img/img--verity-score@2x.png')
+        figcaption.annotation User participation was integral to the app's longterm success, as the model needed to be continually trained to improve its ability to parse for gems. Incentivizing users to perform an extra step of rating each item proved, as one would expect, extremely difficult.#[br]#[br]Our approach eventually leaned on consistent rating usage from sponsor users, supplemented by passive metrics from clicks, link clicks, and save/citations to translate into a gem's score.
+          
+      p When our department was dissolved in late 2021, Verity was the only app that survived the sundering and transferred to another team, along with its product owner.
+      
+      .prev-next
+        a.prev-button(href='index.html')
+          span.prev-next-button__label PREV
+          span.prev-next-button__text About
+        a.next-button(href='bluemine.html')
+          span.prev-next-button__label NEXT
+          span.prev-next-button__text Bluemine
+          .prev-next-icon
+            include ../img/icon--bm.svg
