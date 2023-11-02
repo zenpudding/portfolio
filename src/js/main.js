@@ -17,9 +17,30 @@ $(document).ready(function(){
       clearNavActive();
       $('#about-link').addClass('active');
       break;
+    case '/verity.html':
+      clearNavActive();
+      $('#verity-link').addClass('active');
+      break;
     case '/bluemine.html':
       clearNavActive();
       $('#bluemine-link').addClass('active');
+      break;
+    case '/agency.html':
+      clearNavActive();
+      $('#agency-link').addClass('active');
+      break;
+    case '/eos.html':
+      clearNavActive();
+      $('#eos-link').addClass('active');
+      break;
+    case '/cupid95.html':
+      clearNavActive();
+      $('#cupid-link').addClass('active');
+      break;
+    case '/resume.html':
+      clearNavActive();
+      $('#resume-link').addClass('active');
+      break;
   }
 
   //clear nav active states

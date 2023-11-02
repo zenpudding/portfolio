@@ -1,0 +1,29 @@
+html(lang="en")
+  include ../partials/_header.pug
+  body
+    include ../partials/_nav.pug
+    
+    .main
+      .work-hero
+        h1 Eggs on Sale
+          .hero-tag Comic
+          //- .hero-icon
+          //-   include ../img/icon--verity.svg
+        .work-hero-desc Shortform slice of life webcomic
+        
+      p In 2015 I started a slice of life/comedy webcomic called Eggs on Sale. It had short episodes that were semi-autobiographical, and has over 40 entries as of now. It was featured on both #[a.link(href='https://www.webtoons.com/en/canvas/eggs-on-sale/list?title_no=22642' target='_blank') Webtoon Canvas] and #[a.link(href='https://tapas.io/series/Eggs-on-Sale/info' target='_blank') Tapas Community], and garnered a modest following.
+      
+      figure.img-group
+        img(src='/img/img--eos.png')
+          
+      p
+          
+      .prev-next
+        a.prev-button(href='agency.html')
+          span.prev-next-button__label PREV
+          span.prev-next-button__text Agency work
+        a.next-button(href='cupid95.html')
+          span.prev-next-button__label NEXT
+          span.prev-next-button__text Cupid 9-5
+          .prev-next-icon
+            //- include ../img/icon--bm.svg

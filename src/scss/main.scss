@@ -37,14 +37,15 @@ p {
 
 button {
   font-family: 'League Spartan Variable','Arial', sans-serif;
-  color: $color--primary;
-  background: none;
+  color: $color--whitetext;
+  background-color: $color--primary-dark;
   font-size: 1.25rem;
   cursor: pointer;
+	border: none;
   transition: background-color .17s ease-out;
 
   @include hoverable {
-    background-color: $color--grayhover;
+    background-color: $color--primary-darkest;
   }
 }
 

@@ -1,0 +1,32 @@
+html(lang="en")
+  include ../partials/_header.pug
+  body
+    include ../partials/_nav.pug
+    
+    .main
+      .work-hero
+        h1 Cupid 9-5
+          .hero-tag Comic
+          //- .hero-icon
+          //-   include ../img/icon--verity.svg
+        .work-hero-desc Longform scifi/comedy webcomic
+        
+      p After writing a short form comic series for a few years, I wanted to try my hand at longform storytelling for the first time. I started another comedy/slice of life series (this time entirely fiction) about a failed cupid that goes corporate, and his mysterious assigned adoption of a wayward human soul. This was also featured on #[a.link(href='https://www.webtoons.com/en/canvas/cupid-9-5/list?title_no=755190' target='_blank') Webtoon Canvas] and #[a.link(href='https://tapas.io/series/Cupid-9-5/info' target='_blank') Tapas Community], and ran for 24 episodes (currently on hiatus).
+      
+      figure.img-group
+        img(src='/img/img--cupid-1.png')
+        img(src='/img/img--cupid-2.png')
+        img(src='/img/img--cupid-3.png')
+        img(src='/img/img--cupid-4.png')
+
+      p
+          
+      .prev-next
+        a.prev-button(href='eos.html')
+          span.prev-next-button__label PREV
+          span.prev-next-button__text Eggs on Sale
+        //- a.next-button(href='cupid95.html')
+        //-   span.prev-next-button__label NEXT
+        //-   span.prev-next-button__text Cupid 9-5
+        //-   .prev-next-icon
+            //- include ../img/icon--bm.svg
