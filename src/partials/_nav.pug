@@ -9,8 +9,8 @@ nav
         .icon--close
           include ../img/icon--close.svg
         span.title-a zevin
-        span.title-b .about
-      button.nav-contact contact
+        span.title-b .work
+      a.btn.nav-contact-small(href='mailto:zevin.work@gmail.com' target='_blank') contact
     .nav-links
       ul.nav-link-group
         li
@@ -41,9 +41,14 @@ nav
             span.nav-link-item--text Cupid 9-5
             span.nav-link-item--tag Comic
         
+      //- ul.nav-link-group
+      //-   li
+      //-     a.nav-link-item
+      //-       span.nav-link-item--text Resume
+      
       ul.nav-link-group
-        li
-          a.nav-link-item
-            span.nav-link-item--text Resume
-            
-      button.nav-contact-large Contact
+        .nav-category GET IN TOUCH
+        .contact-section
+          a.link(href='mailto:zevin.work@gmail.com' target='_blank') zevin.work@gmail.com
+          button.copy-btn
+            include ../img/icon--copy.svg

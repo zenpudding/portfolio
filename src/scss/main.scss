@@ -35,7 +35,7 @@ p {
   color: $color--paragraph;
 }
 
-button {
+.btn {
   font-family: 'League Spartan Variable','Arial', sans-serif;
   color: $color--whitetext;
   background-color: $color--primary-dark;
@@ -47,6 +47,10 @@ button {
   @include hoverable {
     background-color: $color--primary-darkest;
   }
+
+	@include screen__xl {
+		border-radius: .5rem;
+	}
 }
 
 a {
@@ -58,12 +62,12 @@ a {
 	color: $color--primary;
 	font-weight: 500;
 	text-decoration: underline;
-	text-decoration-thickness: .1rem;
+	text-decoration-thickness: 1.5px;
 	text-underline-offset: .2rem;
 
 	@include hoverable {
 		color: $color--primary-faded;
-		text-decoration-thickness: .15rem;
+		text-decoration-thickness: 2.5px;
 		transition: color 1s ease;
 	}
 

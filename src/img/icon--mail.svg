@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="icon--mail" clip-path="url(#clip_1)">
+    <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="icon--mail" fill="none" stroke="none" />
+    <g id="Group" transform="translate(1.9997559 4)">
+      <path d="M0 0L8 6.5L16 0" id="Vector" fill="none" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+      <path d="M0 0L0 12L16 12L16 0L0 0Z" id="Vector" fill="none" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+    </g>
+  </g>
+</svg>

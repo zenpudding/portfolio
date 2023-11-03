@@ -60,18 +60,105 @@ nav {
     }
   }
 
-  button.nav-contact {
+  a.btn.nav-contact-small {
     padding: 1.125rem 1.5rem;
     border: none;
     line-height: 1;
+    color: $color--primary;
+    background-color: $color--bg;
     float: right;
+
+    @include hoverable {
+      background-color: $color--grayhover;
+    }
+
+    @include screen__md {
+      display: none;
+    }
   }
 
-  button.nav-contact-large {
+  .contact-section {
+    position: relative;
     width: 100%;
+    box-sizing: border-box;
     padding: 1rem 1.5rem;
-    margin-top: 1rem;
+    margin-top: .5rem;
+    line-height: 1.125rem;
+    background-color: $color--faintbg;
+
+    @include screen__sm {
+      margin-left: 1.5rem;
+      padding: 1rem;
+      max-width: 18rem;
+      border-radius: .5rem;
+    }
+
+    @include screen__md {
+      margin-left: 0;
+      padding-left: 1.5rem;
+      border-radius: 0;
+    }
+
+    @include screen__xl {
+      padding: 1rem 1.5rem;
+      border-radius: .5rem;
+      max-width: none;
+    }
+
+    a {
+      font-size: 1.125rem;
+      color: #b5b5b5;
+      text-decoration-thickness: 1.25px;
+
+      @include hoverable {
+        color: $color--whitetext;
+        text-decoration-thickness: 2px;
+      }
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: .875rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      background-color: $color--graybutton;
+      transition: background-color .17s ease-out;
+
+      @include hoverable {
+        background-color: $color--grayhover;
+      }
+
+      @include screen__sm {
+        padding: .875rem;
+        border-radius: .5rem;
+      }
+
+      @include screen__md {
+        border-radius: 0;
+      }
+
+      @include screen__xl {
+        border-radius: .5rem;
+      }
+    }
   }
+
+  // button.nav-contact-large {
+  //   position: relative;
+  //   width: 100%;
+  //   padding: 1rem 1.5rem;
+  //   margin-top: 1rem;
+  //   text-align: left;
+  //   line-height: 1;
+  //
+  //   svg {
+  //     position: absolute;
+  //     right: 1.5rem;
+  //     vertical-align: middle;
+  //   }
+  // }
 
   .contact-link {
     color: $color--whitetext;
