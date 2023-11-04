@@ -83,7 +83,6 @@ nav {
     box-sizing: border-box;
     padding: 1rem 1.5rem;
     margin-top: .5rem;
-    line-height: 1.125rem;
     background-color: $color--faintbg;
 
     @include screen__sm {
@@ -117,18 +116,16 @@ nav {
     }
 
     .copy-btn {
+      display: flex;
+      width: 3rem;
       position: absolute;
       top: 0;
       right: 0;
-      padding: .875rem 1.5rem;
+      padding: .875rem;
       border: none;
       cursor: pointer;
       background-color: $color--graybutton;
-      transition: background-color .17s ease-out;
-
-      @include hoverable {
-        background-color: $color--grayhover;
-      }
+      transition: background-color .17s ease-out, width .17s ease-out;
 
       @include screen__sm {
         padding: .875rem;
@@ -142,6 +139,52 @@ nav {
       @include screen__xl {
         border-radius: .5rem;
       }
+
+      svg {
+        justify-content: left;
+      }
+
+      .copy-btn-text-a, .copy-btn-text-b {
+        position: absolute;
+        left: 2rem;
+        width: 0;
+        opacity: 0;
+        color: $color--primary;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        text-align: left;
+        vertical-align: middle;
+        pointer-events: none;
+      }
+
+      @include hoverable {
+        width: 6rem;
+        background-color: $color--grayhover;
+
+        .copy-btn-text-a {
+          width: auto;
+          opacity: 1;
+          margin-left: .625rem;
+          transition: opacity .1s ease-out .2s;
+        }
+      }
+
+      &.copy-btn-active {
+        width: 6.625rem;
+        background-color: $color--darkerbg;
+
+        .copy-btn-text-a {
+          width: auto;
+          opacity: 1;
+          margin-left: .625rem;
+          transition: opacity .1s ease-out .2s;
+        }
+      }
+
+      // &:active {
+      //   width: 7.5rem;
+      //   transition: width .17s ease-out;
+      // }
     }
   }
 

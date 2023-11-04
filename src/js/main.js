@@ -52,3 +52,16 @@ $(document).ready(function(){
   }
 
 });
+
+//copy email to clipboard
+function copyEmail() {
+  var copytext = document.getElementById("contactmail").innerHTML;
+  navigator.clipboard.writeText(copytext);
+  copyButton();
+}
+
+function copyButton() {
+  $('.copy-btn').addClass('copy-btn-active');
+  $('.copy-btn-text-a').html('Copied');
+  setTimeout(() => { $('.copy-btn').removeClass('copy-btn-active'); $('.copy-btn-text-a').html('Copy'); }, 1500);
+}
