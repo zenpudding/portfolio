@@ -80,8 +80,8 @@ a {
 
 	@include hoverable {
 		color: $color--primary-faded;
-		text-decoration-thickness: 2.5px;
-		transition: color 1s ease;
+		text-decoration-thickness: 3px;
+		transition: color .17s ease;
 	}
 
 }
@@ -346,7 +346,7 @@ body {
 		.subtitle, .hero-tag {
 			display: inline;
 			margin-top: 0;
-			margin-left: .75rem;
+			margin-left: .5rem;
 		}
 
 		.work-hero {
