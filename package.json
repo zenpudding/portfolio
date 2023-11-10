@@ -9,11 +9,11 @@
     "copyfiles": "^2.4.1",
     "del-cli": "^5.0.0",
     "gh-pages": "^5.0.0",
-    "sass": "^1.63.6",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "postcss-cli": "^10.1.0",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "sass": "^1.63.6"
   },
   "scripts": {
     "pug": "pug --pretty -o static src/views static/",
@@ -41,5 +41,8 @@
   "bugs": {
     "url": "https://github.com/zenpudding/portfolio/issues"
   },
-  "homepage": "https://zenpudding.github.io/portfolio"
+  "homepage": "https://zenpudding.github.io/portfolio",
+  "dependencies": {
+    "filenamify": "^6.0.0"
+  }
 }
