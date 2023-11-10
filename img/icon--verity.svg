@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0" y1="0.5000067" x2="0.99998665" y2="0.5000067" id="gradient_1">
+      <stop offset="0%" stop-color="#A76DF9" />
+      <stop offset="100%" stop-color="#FF8389" />
+    </linearGradient>
+    <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="icon--verity Copy" clip-path="url(#clip_1)">
+    <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="icon--verity-Copy" fill="#FFFFFF" fill-opacity="0" stroke="none" />
+    <g id="verity-prototype-v4" transform="translate(2 2)">
+      <g id="06---fact-preview-copy-16">
+        <g id="Group-12">
+          <path d="M0 16L16 16L16 0L0 0L0 16Z" id="Fill-1" fill="url(#gradient_1)" fill-rule="evenodd" stroke="none" />
+          <path d="M14.5 9.25051L13.1141 9.80736C11.8355 10.3217 10.8211 11.3362 10.3068 12.6149L9.75 14L9.1932 12.6149C8.67791 11.3362 7.66454 10.3217 6.38491 9.80736L5 9.25051L6.38491 8.69264C7.66454 8.1783 8.67791 7.16482 9.1932 5.88607L9.75 4.5L10.3068 5.88607C10.8211 7.16482 11.8355 8.1783 13.1141 8.69264L14.5 9.25051L14.5 9.25051Z" id="Fill-9" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

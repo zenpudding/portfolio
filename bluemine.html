@@ -13,6 +13,7 @@
     <script src="js/main.js"></script>
   </head>
   <body>
+    <!-- note: gh-pages auto resolves html extensions, but can't get it to work for browsersync. Can remove html links here before deploy-->
     <nav>
       <div class="nav-content-block">
         <div class="nav-top"><a class="title">
@@ -46,32 +47,103 @@
     <path d="M2 18L18 2" id="Line-2" fill="none" fill-rule="evenodd" stroke="#87E2CA" stroke-width="2" stroke-linecap="round" />
   </g>
 </svg>
-            </div><span class="title-a">zevin</span><span class="title-b">.about</span></a>
-          <button class="nav-contact">contact</button>
-        </div>
+            </div><span class="title-a">zevin</span><span class="title-b">.work</span></a><a class="btn nav-contact-small" href="mailto:zevin.work@gmail.com" target="_blank">contact</a></div>
         <div class="nav-links">
           <ul class="nav-link-group">
             <li><a class="nav-link-item" id="about-link" href="/"><span class="nav-link-item--text">About</span></a></li>
           </ul>
           <ul class="nav-link-group">
-            <div class="nav-category">DESIGN</div>
+            <div class="nav-category">DESIGN & DEV</div>
+            <li><a class="nav-link-item" id="verity-link" href="verity.html"><span class="nav-link-item--text">Verity</span><span class="nav-link-item--tag">IBM</span></a></li>
             <li><a class="nav-link-item" id="bluemine-link" href="bluemine.html"><span class="nav-link-item--text">Bluemine</span><span class="nav-link-item--tag">IBM</span></a></li>
-            <li><a class="nav-link-item"><span class="nav-link-item--text">Verity</span><span class="nav-link-item--tag">IBM</span></a></li>
-            <li><a class="nav-link-item"><span class="nav-link-item--text">Agency work</span><span class="nav-link-item--tag">Misc</span></a></li>
+            <li><a class="nav-link-item" id="agency-link" href="agency.html"><span class="nav-link-item--text">Agency work</span><span class="nav-link-item--tag">Misc</span></a></li>
           </ul>
           <ul class="nav-link-group">
             <div class="nav-category">ART</div>
-            <li><a class="nav-link-item"><span class="nav-link-item--text">Cupid 9-5</span><span class="nav-link-item--tag">Comic</span></a></li>
-            <li><a class="nav-link-item"><span class="nav-link-item--text">Eggs on Sale</span><span class="nav-link-item--tag">Comic</span></a></li>
+            <li><a class="nav-link-item" id="eos-link" href="eos.html"><span class="nav-link-item--text">Eggs on Sale</span><span class="nav-link-item--tag">Comic</span></a></li>
+            <li><a class="nav-link-item" id="cupid-link" href="cupid95.html"><span class="nav-link-item--text">Cupid 9-5</span><span class="nav-link-item--tag">Comic</span></a></li>
           </ul>
           <ul class="nav-link-group">
-            <li><a class="nav-link-item"><span class="nav-link-item--text">Resume</span></a></li>
+            <div class="nav-category">CONTACT</div>
+            <div class="contact-section"><a class="link" id="contactmail" href="mailto:zevin.work@gmail.com" target="_blank">zevin.work@gmail.com</a>
+              <button class="copy-btn" onclick="copyEmail()"><?xml version="1.0" encoding="utf-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="icon--copy" clip-path="url(#clip_1)">
+    <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="icon--copy" fill="none" stroke="none" />
+    <path d="M15 2L2 2L2 15" id="Vector-2" fill="none" fill-rule="evenodd" stroke="#87E2CA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M6 6L18 6L18 18L6 18L6 6Z" id="Vector" fill="none" fill-rule="evenodd" stroke="#87E2CA" stroke-width="2" stroke-linejoin="round" />
+  </g>
+</svg><span class="copy-btn-text-a">Copy</span>
+              </button>
+            </div>
           </ul>
         </div>
       </div>
     </nav>
     <div class="main">
-      <h1>Bluemine</h1>
+      <div class="work-hero">
+        <h1>Bluemine
+          <div class="hero-tag">IBM</div>
+          <div class="hero-icon"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+	<defs><style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:#fff;}</style><linearGradient id="linear-gradient" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0f62fe"/><stop offset="1" stop-color="#78a9ff"/></linearGradient></defs><polygon class="cls-1" points="4 2 12 2 16 6 8 14 0 6 4 2"/><rect class="cls-2" x="8.59" y="4.59" width="2.83" height="2.83" transform="translate(-1.31 8.83) rotate(-45)"/>
+</svg>
+          </div>
+        </h1>
+        <div class="work-hero-desc">Design leadership and front-end dev for IBM internal research platform</div>
+      </div>
+      <p>Bluemine was an internal research app at IBM. It served as an aggregator of several external and internal market intelligence reports, a publishing tool for internal analysts, as well as a directory for internally authored tools and dashboards.</p>
+      <p>Shortly after I joined the design team in the Market Development & Insights division, our group was tasked with redesigning and updating the app from the ground up. The resulting 1.0 version led to major tested improvements to experience and architecture, as well as inclusion in the list of <a class="link" href="https://www.nngroup.com/news/item/2019-intranet-design-awards/" target="_blank">2019 Nielsen Norman Intranet Design</a> winners.</p>
+      <figure class="img-group"><img src="/img/img--bm-1.png"/>
+        <figcaption class="annotation">Some early copy from our 1.0 homepage and promotional imagery. Despite being an internal tool, we still had to do our fair share of marketing -- report vendor licenses (and our team) were funded by an internal subscription system.</figcaption>
+      </figure>
+      <p>I started out mostly working on the foundational UX of the app for other designers to build and iterate upon, as well as supporting the front-end development crew. After the 1.0 release, I began taking more of a leadership role, guiding large swathes of the overall experience and leading implementation of a large feature branch.</p>
+      <p>Some of my contributions include:</p>
+      <ul>
+        <li>Foundational wireframes for app navigation and structure</li>
+        <li>User flows and gray wires for publishing process</li>
+        <li>Occasional high fidelity mockups for certain views</li>
+        <li>Front-end support, PR review for any designs I've contributed to</li>
+        <li>Front-end implementation/refactors of certain views</li>
+        <li>Squad leadership responsible for overall user journey, onboarding, and support</li>
+        <li>Leadership of a Channels feature set - a Reddit-like space of information exchange and conversation about market topics</li>
+      </ul>
+      <p>Instead of writing a novella about this behemoth of a project, I'll elect instead to share a few snapshots of my work with short annotations. Each snapshot may have links to larger boards that contain more of the meat of my work and process.</p>
+      <figure class="img-group"><img src="/img/img--bm-publish.png"/>
+        <figcaption class="annotation">After providing early <a class="link" href="/img/img--bm-board-publish.png" target="_blank">lo-fi user flows</a> for the publication process, I transitioned to supporting the front-end team in building the views that other designers iterated upon.<br/><br/>A lot of my front-end work was focused on visual alignment with mocks, accessibility standards, and optimization (like re-writing the report view component to allow it to be called from the preview tab in edit mode).</figcaption>
+      </figure>
+      <figure class="img-group"><img src="/img/img--bm-layers.png"/>
+        <figcaption class="annotation">During work on 1.0, our team's other front-end/designer hybrid and I worked to establish best practice for our offshore devs. This included things like naming conventions, wiki maintenance, and example graphics explaining z-index distribution between layers.<br/><br/>When Bluemine later started its migration to Carbon Design System, I defined a set of custom <a class="link" href="/img/img--bm-morelayouts.png" target="_blank">layout types</a> with Bluemine's existing views in mind.</figcaption>
+      </figure>
+      <figure class="img-group"><img src="/img/img--bm-roadmap.png"/>
+        <figcaption class="annotation">Shortly after the launch of 1.0, I was made squad lead for features related to overall user journey. At that point, I was doing lo/mid-fi designs, front-end, project management, scrums/sprint planning, and contributing to our design system all at once. Eventually this squad became assigned to the Channels feature branch, for which I also maintained design epics/stories on <a class="link" href="/img/img--bm-channelspost.png" target="_blank">large boards</a>.<br/><br/>Our squad calls would often involve devs whiteboarding and relaying data/API details while I go over these stories, making for a close syncronization between design and dev.</figcaption>
+      </figure>
+      <figure class="img-group"><img src="/img/img--bm-identity.png"/>
+        <figcaption class="annotation">Early in 1.0's wireframe phase, I used a diamond shape with geometric cutouts as a placeholder for the app icon. Over time, it kind of stuck and the team requested I do the official iconography and branding. It didn't take many <a class="link" href="/img/img--bm-identity-legacy.png" target="_blank">iterations</a> to arrive at something fitting to our main organization's branding while also being flexible enough to extrapolate to an entire app ecosystem.<br/><br/>I created the matrix of AI artboards for exports of all sizes and contexts and created a style/brand guide(something I wish I had saved to show here...).<br/><br/>When the app migrated to Carbon Design, I updated the branding(pictured above), and also established visual motif and updated illustrational styles to be in line with broader Carbon guidelines.</figcaption>
+      </figure>
+      <p></p>
+      <div class="prev-next"><a class="prev-button" href="verity.html"><span class="prev-next-button__label">PREV</span><span class="prev-next-button__text">Verity</span></a><a class="next-button" href="agency.html"><span class="prev-next-button__label">NEXT</span><span class="prev-next-button__text">Agency work</span>
+          <div class="prev-next-icon"><?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="icon--agency" clip-path="url(#clip_1)">
+    <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="icon--agency" fill="none" stroke="none" />
+    <path d="M1 2L19 2L19 18L1 18L1 2Z" id="Rectangle-Copy" fill="#171717" fill-rule="evenodd" stroke="none" />
+    <path d="M5.6707 10.3709L8.4963 10.3709C8.50063 10.3276 8.50928 10.1805 8.50928 10.1329C8.50928 9.04681 7.83425 8.35447 6.79575 8.35447C5.65772 8.35447 5 9.15498 5 10.1935C5 11.3185 5.69666 12.1147 6.84335 12.1147C7.67415 12.1147 8.10686 11.8464 8.40543 11.4094L8.04628 10.981C7.91214 11.2104 7.55299 11.5738 6.88662 11.5738C6.08178 11.5738 5.67936 11.0286 5.6707 10.3709L5.6707 10.3709ZM7.82997 9.82986L5.69671 9.82986C5.73132 9.43609 6.01259 8.89087 6.80445 8.89087C7.55736 8.89087 7.81266 9.46205 7.82997 9.82986L7.82997 9.82986ZM9.05456 8.45823L9.05456 9.05105L9.75988 9.05105L9.75988 11.0805C9.75988 11.7988 10.1666 12.1146 10.7032 12.1146C11.1575 12.1146 11.4604 11.9329 11.5124 11.881L11.2311 11.3747C11.2095 11.4007 11.084 11.5175 10.859 11.5175C10.608 11.5175 10.4392 11.3358 10.4392 10.8987L10.4392 9.05105L11.3696 9.05105L11.3696 8.45823L10.4392 8.45823L10.4392 7L9.75988 7L9.75988 8.45823L9.05456 8.45823ZM13.836 11.5392C13.2605 11.5392 12.659 11.0589 12.659 10.2324C12.659 9.41028 13.2605 8.92997 13.836 8.92997C14.3077 8.92997 14.5716 9.17229 14.6452 9.2372L14.987 8.73525C14.8832 8.64438 14.4418 8.35447 13.81 8.35447C12.8667 8.35447 11.9927 9.01219 11.9927 10.2324C11.9927 11.4527 12.8667 12.1147 13.81 12.1147C14.4505 12.1147 14.9135 11.8464 15 11.7686L14.6625 11.2709C14.5889 11.3358 14.299 11.5392 13.836 11.5392L13.836 11.5392Z" id="Path" fill="#FFFFFF" stroke="none" />
+  </g>
+</svg>
+
+          </div></a></div>
     </div>
   </body>
 </html>

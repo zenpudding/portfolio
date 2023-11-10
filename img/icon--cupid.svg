@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="icon--cupid" clip-path="url(#clip_1)">
+    <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="icon--cupid" fill="none" stroke="none" />
+    <g id="heart-icon-diamond" transform="translate(1 1)">
+      <path d="M9 0L18 9L9 18L0 9L9 0Z" id="New-shape" fill="#171717" fill-rule="evenodd" stroke="none" />
+      <path d="M9 9L10.8 7.2L12.6 9L9 12.6L5.4 9L7.2 7.21802L9 9Z" id="New-shape-2" fill="#FF7CF1" fill-rule="evenodd" stroke="none" />
+    </g>
+  </g>
+</svg>

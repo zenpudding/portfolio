@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L16 0L16 16L0 16L0 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="icon--diamond-12" clip-path="url(#clip_1)">
+    <path d="M0 0L16 0L16 16L0 16L0 0Z" id="icon--diamond-12" fill="none" fill-rule="evenodd" stroke="none" />
+    <path d="M8 2L2 8L8 14L14 8L8 2Z" id="Vector" fill="#87E2CA" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>
