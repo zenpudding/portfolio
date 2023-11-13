@@ -21,7 +21,7 @@
     "copy-fonts": "copyfiles --flat src/fonts/* static/fonts",
     "copy-img": "copyfiles --flat src/img/* static/img",
     "copy-js": "copyfiles --flat src/js/* static/js",
-    "copy-other": "copyfiles --flat src/.htaccess src/CNAME src/favicon.ico static",
+    "copy-other": "copyfiles --flat src/.htaccess src/CNAME src/favicon.ico src/site.webmanifest static",
     "copy-rest": "npm run copy-fonts && npm run copy-img && npm run copy-js && npm run copy-other",
     "clean": "del-cli static",
     "watch-pug": "onchange \"src/**/*.pug\" -- npm run pug",
