@@ -4,11 +4,12 @@
     <title>zevin.work</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="robots" content="noindex"/>
     <link rel="stylesheet" href="styles/main.css"/>
-    <link rel="apple-touch-icon-precomposed" href="/img/favicon-152.png"/>
-    <link rel="msapplication-TileColor" content="#ffffff"/>
-    <link rel="msapplication-TileImage" content="/img/favicon-144.png"/>
-    <link rel="icon" type="image/png" href="/img/favicon-32.png" sizes="32x32"/>
+    <link rel="icon" href="/favicon.ico" sizes="48x48"/>
+    <link rel="icon" href="/img/favicon.svg" sizes="any" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
   </head>
@@ -66,7 +67,7 @@
           <ul class="nav-link-group">
             <div class="nav-category">CONTACT</div>
             <div class="contact-section"><a class="link" id="contactmail" href="mailto:zevin.work@gmail.com" target="_blank">zevin.work@gmail.com</a>
-              <button class="copy-btn" onclick="copyEmail()"><?xml version="1.0" encoding="utf-8"?>
+              <button class="copy-btn" onclick="copyEmail()" aria-label="copy email to clipboard"><?xml version="1.0" encoding="utf-8"?>
 <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="path_1" />
@@ -110,21 +111,21 @@
         <div class="work-hero-desc">An assortment of past projects</div>
       </div>
       <p>Before joining IBM, I worked at a few agencies and another large corporation. Below are a few examples of my work from those early years.</p>
-      <figure class="img-group"><img src="/img/img--agency-eprove.png"/>
+      <figure class="img-group"><img src="/img/img--agency-eprove.png" alt="eProve app suite logo and app icons, followed by screens of two main tools"/>
         <figcaption class="annotation"><em>AdvancEd: eProve (~2014-2015)</em>, agency: Digital Scientists<br/><br/>I was one of two designers who worked on AdvancEd(now <a class="link" href="https://www.cognia.org/" target="_blank">Cognia</a>)'s suite of apps for school accreditation and improvement. <em>Eleot</em> is a classroom observation tool and <em>Surveys</em> is a survey builder tool, both of which were paper-based before we were brought on to translate into an app ecosystem.<br/><br/>I also established the branding, starting with the general app suite icon and first two apps we worked on. The other ones were given placeholder icons with a style ready for extrapolation when the time came. You can read the full case study <a class="link" href="https://digitalscientists.com/case-studies/advanced/" target="_blank">here</a>.</figcaption>
       </figure>
-      <figure class="img-group"><img src="/img/img--agency-source.png"/>
+      <figure class="img-group"><img src="/img/img--agency-source.png" alt="Final icon and wordmark for AdvancEd Source publication, as well as variations and alternative icons"/>
         <figcaption class="annotation"><em>AdvancEd: Source (~2014-2015)</em>, agency: Digital Scientists<br/><br/>In additional to design work on their app suite, we were also brought on to redesign AdvancEd's quarterly publication <em>Source</em>. Most of my work on this was dedicated to branding.<br/><br/>Being an extremely small budget side project, it only allowed for a few short iterations to land on a simple icon and wordmark. The bottom image is a set of alternate icon concepts that didn't make the cut, but that I personally liked.</figcaption>
       </figure>
-      <figure class="img-group"><img src="/img/img--agency-napa@2x.png"/>
+      <figure class="img-group"><img src="/img/img--agency-napa@2x.png" alt="few screens showing updated NAPA app, as well as a before-after comparison"/>
         <figcaption class="annotation"><em>NAPA Know How (~2015)</em>, agency: Digital Scientists<br/><br/>This one's kind of funny. Napa Auto Part's app, 'Know How' wasn't doing great in the app store due to iOS/Android updates breaking things, and we were brought on to perform a band-aid fix before another agency did a complete overhaul. There were issues with touching the source code, so we literally just wrapped the existing site code and inserted javascript to clean up the html/css and add some cleaner UX.<br/><br/>Weirdly enough, I was tasked with the writing of this javascript, even as a Designer. I did the best I could using a chrome extension to test on their production site, with the crazy limitation of only being able to work with what was already there. The full case study is <a class="link" href="https://digitalscientists.com/case-studies/napa/" target="_blank">here</a>, though it doesn't quite fully reflect my own wacky but proud memories of this weird project.</figcaption>
       </figure>
-      <figure class="img-group"><img src="/img/img--agency-gng.jpg"/>
+      <figure class="img-group"><img src="/img/img--agency-gng.jpg" alt="final screens for Georgia Natural Gas site project, as well as the main navigation that I built"/>
         <figcaption class="annotation"><em>Georgia Natural Gas (2016)</em>, agency: Macquarium<br/><br/>During my short term contract position with Macquarium, I was hired to provide design support for their redesign and development of Georgia Natural Gas's site and marketing materials. Things took a bit of a turn, however, when front-end development was found to be lagging behind deadlines. Having some basic front-end experience, I volunteered to help out and ended up leading much of the front-end development effort.<br/><br/>Aside from doing plenty of QA on half finished views, I ended up completely rewriting pieces like the main navigation (which is funny to see still being <a class="link" href="https://www.gng.com/" target="_blank">used today</a>) as well as responsive behavior. Again, full case study can be found <a class="link" href="https://www.macquarium.com/work-gng" target="_blank">here</a>.</figcaption>
       </figure>
       <p></p>
       <div class="prev-next"><a class="prev-button" href="bluemine.html"><span class="prev-next-button__label">PREV</span><span class="prev-next-button__text">Bluemine</span></a><a class="next-button" href="eos.html"><span class="prev-next-button__label">NEXT</span><span class="prev-next-button__text">Eggs on Sale</span>
-          <div class="prev-next-icon"><img src="../img/icon--eos.png"/></div></a></div>
+          <div class="prev-next-icon"><img src="../img/icon--eos.png" alt="icon of eggs on sale"/></div></a></div>
     </div>
   </body>
 </html>

@@ -4,11 +4,12 @@
     <title>zevin.work</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="robots" content="noindex"/>
     <link rel="stylesheet" href="styles/main.css"/>
-    <link rel="apple-touch-icon-precomposed" href="/img/favicon-152.png"/>
-    <link rel="msapplication-TileColor" content="#ffffff"/>
-    <link rel="msapplication-TileImage" content="/img/favicon-144.png"/>
-    <link rel="icon" type="image/png" href="/img/favicon-32.png" sizes="32x32"/>
+    <link rel="icon" href="/favicon.ico" sizes="48x48"/>
+    <link rel="icon" href="/img/favicon.svg" sizes="any" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
   </head>
@@ -66,7 +67,7 @@
           <ul class="nav-link-group">
             <div class="nav-category">CONTACT</div>
             <div class="contact-section"><a class="link" id="contactmail" href="mailto:zevin.work@gmail.com" target="_blank">zevin.work@gmail.com</a>
-              <button class="copy-btn" onclick="copyEmail()"><?xml version="1.0" encoding="utf-8"?>
+              <button class="copy-btn" onclick="copyEmail()" aria-label="copy email to clipboard"><?xml version="1.0" encoding="utf-8"?>
 <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="path_1" />
@@ -99,7 +100,7 @@
       </div>
       <p>Bluemine was an internal research app at IBM. It served as an aggregator of several external and internal market intelligence reports, a publishing tool for internal analysts, as well as a directory for internally authored tools and dashboards.</p>
       <p>Shortly after I joined the design team in the Market Development & Insights division, our group was tasked with redesigning and updating the app from the ground up. The resulting 1.0 version led to major tested improvements to experience and architecture, as well as inclusion in the list of <a class="link" href="https://www.nngroup.com/news/item/2019-intranet-design-awards/" target="_blank">2019 Nielsen Norman Intranet Design</a> winners.</p>
-      <figure class="img-group"><img src="/img/img--bm-1.png"/>
+      <figure class="img-group"><img src="/img/img--bm-1.png" alt="marketing copy and promo image example"/>
         <figcaption class="annotation">Some early copy from our 1.0 homepage and promotional imagery. Despite being an internal tool, we still had to do our fair share of marketing -- report vendor licenses (and our team) were funded by an internal subscription system.</figcaption>
       </figure>
       <p>I started out mostly working on the foundational UX of the app for other designers to build and iterate upon, as well as supporting the front-end development crew. After the 1.0 release, I began taking more of a leadership role, guiding large swathes of the overall experience and leading implementation of a large feature branch.</p>
@@ -113,17 +114,17 @@
         <li>Squad leadership responsible for overall user journey, onboarding, and support</li>
         <li>Leadership of a Channels feature set - a Reddit-like space of information exchange and conversation about market topics</li>
       </ul>
-      <p>Instead of writing a novella about this behemoth of a project, I'll elect instead to share a few snapshots of my work with short annotations. Each snapshot may have links to larger boards that contain more of the meat of my work and process.</p>
-      <figure class="img-group"><img src="/img/img--bm-publish.png"/>
+      <p>I could easily write a novella about this behemoth of a project -- especially on the Channels feature branch, which I initiated and pitched to key stakeholders. It could probably be case page on its own...but might be better suited for an in-depth conversation. Meanwhile, here are some examples of other pieces of work from this project.</p>
+      <figure class="img-group"><img src="/img/img--bm-publish.png" alt="the edit post tab of the report publication process"/>
         <figcaption class="annotation">After providing early <a class="link" href="/img/img--bm-board-publish.png" target="_blank">lo-fi user flows</a> for the publication process, I transitioned to supporting the front-end team in building the views that other designers iterated upon.<br/><br/>A lot of my front-end work was focused on visual alignment with mocks, accessibility standards, and optimization (like re-writing the report view component to allow it to be called from the preview tab in edit mode).</figcaption>
       </figure>
-      <figure class="img-group"><img src="/img/img--bm-layers.png"/>
+      <figure class="img-group"><img src="/img/img--bm-layers.png" alt="a graphic I made for the dev wiki that shows z-indeces and app layers"/>
         <figcaption class="annotation">During work on 1.0, our team's other front-end/designer hybrid and I worked to establish best practice for our offshore devs. This included things like naming conventions, wiki maintenance, and example graphics explaining z-index distribution between layers.<br/><br/>When Bluemine later started its migration to Carbon Design System, I defined a set of custom <a class="link" href="/img/img--bm-morelayouts.png" target="_blank">layout types</a> with Bluemine's existing views in mind.</figcaption>
       </figure>
-      <figure class="img-group"><img src="/img/img--bm-roadmap.png"/>
+      <figure class="img-group"><img src="/img/img--bm-roadmap.png" alt="a snapshot of my our roadmap while I led the User Journey squad"/>
         <figcaption class="annotation">Shortly after the launch of 1.0, I was made squad lead for features related to overall user journey. At that point, I was doing lo/mid-fi designs, front-end, project management, scrums/sprint planning, and contributing to our design system all at once. Eventually this squad became assigned to the Channels feature branch, for which I also maintained design epics/stories on <a class="link" href="/img/img--bm-channelspost.png" target="_blank">large boards</a>.<br/><br/>Our squad calls would often involve devs whiteboarding and relaying data/API details while I go over these stories, making for a close syncronization between design and dev.</figcaption>
       </figure>
-      <figure class="img-group"><img src="/img/img--bm-identity.png"/>
+      <figure class="img-group"><img src="/img/img--bm-identity.png" alt="icons for bluemine, as well as examples of motif"/>
         <figcaption class="annotation">Early in 1.0's wireframe phase, I used a diamond shape with geometric cutouts as a placeholder for the app icon. Over time, it kind of stuck and the team requested I do the official iconography and branding. It didn't take many <a class="link" href="/img/img--bm-identity-legacy.png" target="_blank">iterations</a> to arrive at something fitting to our main organization's branding while also being flexible enough to extrapolate to an entire app ecosystem.<br/><br/>I created the matrix of AI artboards for exports of all sizes and contexts and created a style/brand guide(something I wish I had saved to show here...).<br/><br/>When the app migrated to Carbon Design, I updated the branding(pictured above), and also established visual motif and updated illustrational styles to be in line with broader Carbon guidelines.</figcaption>
       </figure>
       <p></p>

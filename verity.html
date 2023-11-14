@@ -4,11 +4,12 @@
     <title>zevin.work</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="robots" content="noindex"/>
     <link rel="stylesheet" href="styles/main.css"/>
-    <link rel="apple-touch-icon-precomposed" href="/img/favicon-152.png"/>
-    <link rel="msapplication-TileColor" content="#ffffff"/>
-    <link rel="msapplication-TileImage" content="/img/favicon-144.png"/>
-    <link rel="icon" type="image/png" href="/img/favicon-32.png" sizes="32x32"/>
+    <link rel="icon" href="/favicon.ico" sizes="48x48"/>
+    <link rel="icon" href="/img/favicon.svg" sizes="any" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
   </head>
@@ -66,7 +67,7 @@
           <ul class="nav-link-group">
             <div class="nav-category">CONTACT</div>
             <div class="contact-section"><a class="link" id="contactmail" href="mailto:zevin.work@gmail.com" target="_blank">zevin.work@gmail.com</a>
-              <button class="copy-btn" onclick="copyEmail()"><?xml version="1.0" encoding="utf-8"?>
+              <button class="copy-btn" onclick="copyEmail()" aria-label="copy email to clipboard"><?xml version="1.0" encoding="utf-8"?>
 <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path d="M20 0L20 0L20 20L0 20L0 0L20 0Z" id="path_1" />
@@ -120,16 +121,16 @@
         <div class="work-hero-desc">Solo design on ML-driven research tool</div>
       </div>
       <p>A few years into my time at IBM's Market Development and Insights department, I moved to a team dubbed  MD&I Labs as its sole designer. The smaller team of market analysts, data scientists, and developers focused on rapid prototyping of experimental tools for internal(and potentially external) use.<br/><br/>One of the apps that gained significant momentum was Verity, a tool that scoured market analysis reports for <em>gems</em> -- key phrases and figures -- to help facilitate research. It did so via machine learning and some manual training where sentences were given a score based on their informational value. Basically, it was a specialized tool for generating highlights from documents.</p>
-      <figure class="img-group"><img src="/img/img--verity-home@2x.png"/></figure>
+      <figure class="img-group"><img src="/img/img--verity-home@2x.png" alt="a slice of the Verity home page showing an intro and search bar"/></figure>
       <p>I did all the design work for Verity through several iterations, although much of it was facilitated by a company-wide migration to <a class="link" href="https://carbondesignsystem.com/" target="_blank">Carbon Design System</a>. All of the MD&I Labs projects were heavily UXR driven, so I also helped lead much of the rounds of research along with support from the UXR lead from the main design team.<br/><br/>The beta release of Verity focused on gem search and saving, with future improvements planned for setup of automated feeds based on input parameters. Also in the works were more batch jobs compiling popular items and a personalization algorithm to populate a user's home feed. All in all, Verity was meant to be a lightweight app meant to do one thing well -- to facilitate research by surfacing high value statements and figures.</p>
-      <figure class="img-group"><img src="/img/img--verity-condensed@2x.png"/><img src="/img/img--verity-expanded@2x.png"/>
+      <figure class="img-group"><img src="/img/img--verity-condensed@2x.png" alt="Verity search results - condensed view"/><img src="/img/img--verity-expanded@2x.png" alt="Verity search results - expanded view"/>
         <figcaption class="annotation">We began with a 1:1 layout of cards to detail pane, focusing on speed of browsing and hopping between cards. This meant, however, that icon-only controls were less immediately readable, and some integral pieces of information(such as the entire segment with the Verity Score) were placed a few scrolls down.<br/><br/>Eventually, we decided on having the expanded view be the default, as it better presented value and app functionality off the bat. The improved readability and presence of the detail pane controls also meant that users were more aware of the option to switch to the more fast-browsing mode of the condensed view.<br/><br/>At max size breakpoints, there was enough space to show the expanded view without using the overlay.</figcaption>
       </figure>
       <p>When I outlined Verity's <a class="link" href="/img/img--verity-board.png" target="_blank">basic UI structure</a> in accordance to general Carbon guidelines, the mixed approach I settled on became a personal favorite of mine going forward -- fluid width up to medium breakpoint, then left-aligned fixed width containers all spaced to a soft grid of 8/16px(or .5/1rem). Of course, this mostly applies to layouts where optimal reading length applies. This portfolio site follows a similar structure, with extra spacing on the left before the navigation to account for wide screens to better center the content.</p>
-      <figure class="img-group"><img src="/img/img--verity-score@2x.png"/>
+      <figure class="img-group"><img src="/img/img--verity-score@2x.png" alt="a snippet of explanatory copy on the about page about Verity score"/>
         <figcaption class="annotation">User participation was integral to the app's longterm success, as the model needed to be continually trained to improve its ability to parse for gems. Incentivizing users to perform an extra step of rating each item proved, as one would expect, extremely difficult.<br/><br/>Our approach eventually leaned on consistent rating usage from sponsor users, supplemented by passive metrics from clicks, link clicks, and save/citations to translate into a gem's score.</figcaption>
       </figure>
-      <figure class="img-group"><img src="/img/img--verity-brand.png"/>
+      <figure class="img-group"><img src="/img/img--verity-brand.png" alt="MD&amp;I style and app style examples"/>
         <figcaption class="annotation">Alongside our department's migration of apps to Carbon also came a rebranding in line with general Carbon aesthetics. Our core design team settled on a purple to pink gradient as the main brand color, so with that as a basis I drafted a basic pattern for app icons.<br/><br/>Each would use the brand gradient as a basic fill with a white geometric cutout. Earlier versions also allowed for a translucent white subshape(3rd icon) but was dropped for simplicity and a more defined base shape. Bluemine(rightmost icon) was kept blue given its place as an outlier app and, well, its name.</figcaption>
       </figure>
       <p>When our department was dissolved in late 2021, Verity was the only app that survived the sundering and transferred to another team, along with its product owner.</p>
