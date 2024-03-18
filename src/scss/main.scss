@@ -29,7 +29,7 @@ h2 {
 	font-weight: 400;
 
 	@include screen__lg {
-		font-size: 2rem;
+		font-size: 2.25rem;
 	}
 }
 
@@ -140,7 +140,7 @@ body {
     margin: 0 0 2rem;
 
     &:last-of-type {
-      margin-bottom: 6rem;
+      margin-bottom: 5rem;
     }
   }
 
@@ -200,7 +200,7 @@ body {
 	}
 
 	.work-section, .case-section {
-		margin: 5rem 0;
+		margin: 4rem 0;
 		padding: 1rem 0;
 		border-top: 1px solid $color--grayhover;
 		// border-bottom: 1px solid $color--grayhover;
