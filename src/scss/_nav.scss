@@ -297,6 +297,7 @@ nav {
   // fixed width at larger breakpoints
   @include screen__md {
     overflow: auto;
+    overflow-x: hidden;
     width: auto;
     height: 100vh;
     padding-top: 10vh;
